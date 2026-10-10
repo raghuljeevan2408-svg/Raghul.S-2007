@@ -1,0 +1,788 @@
+/* =====================================================
+   RESET
+===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    margin: 0;
+
+    background: #ffffff;
+
+    color: #17416a;
+
+    font-family: "Poppins", Arial, sans-serif;
+}
+
+
+
+/* =====================================================
+   NAVBAR
+===================================================== */
+
+.planner-navbar {
+
+    width: 100%;
+
+    height: 36px;
+
+    background: #12385e;
+
+    display: flex;
+
+    align-items: center;
+
+    padding: 0 24px;
+
+    position: relative;
+
+    z-index: 10;
+
+}
+
+
+.planner-logo {
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 4px;
+
+    margin-right: 40px;
+
+}
+
+
+.logo-icon {
+
+    color: #ffffff;
+
+    font-size: 10px;
+
+}
+
+
+.planner-nav-links {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+}
+
+
+.planner-nav-links a {
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    font-size: 7px;
+
+    font-weight: 500;
+
+    white-space: nowrap;
+
+}
+
+
+.planner-nav-links a i {
+
+    font-size: 7px;
+
+    margin-right: 3px;
+
+}
+
+
+.planner-nav-links a.active {
+
+    color: #ffad20;
+
+}
+
+
+.logout-link {
+
+    margin-left: auto;
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    font-size: 7px;
+
+    font-weight: 500;
+
+}
+
+
+.logout-link i {
+
+    margin-right: 3px;
+
+}
+
+
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+.planner-header {
+
+    width: 100%;
+
+    height: 106px;
+
+    background: linear-gradient(
+        110deg,
+        #3e73ad 0%,
+        #193e67 100%
+    );
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    color: #ffffff;
+
+}
+
+
+.planner-header h1 {
+
+    font-size: 24px;
+
+    font-weight: 700;
+
+    line-height: 1.2;
+
+    margin-bottom: 7px;
+
+}
+
+
+.planner-header p {
+
+    font-size: 8px;
+
+    color: #e6edf6;
+
+}
+
+
+
+/* =====================================================
+   MAIN
+===================================================== */
+
+.planner-main {
+
+    width: 100%;
+
+    min-height: 640px;
+
+    background: #ffffff;
+
+    padding: 17px 0 30px;
+
+    display: flex;
+
+    justify-content: center;
+
+}
+
+
+.home-planner-form {
+
+    width: 525px;
+
+    background: #ffffff;
+
+    border-radius: 9px;
+
+    padding: 17px;
+
+    box-shadow:
+        0 7px 24px rgba(
+            24,
+            61,
+            100,
+            0.09
+        );
+
+}
+
+
+
+/* =====================================================
+   FORM SECTION
+===================================================== */
+
+.form-section {
+
+    width: 100%;
+
+    background: #f1f4f8;
+
+    border-radius: 6px;
+
+    padding: 13px;
+
+    margin-bottom: 12px;
+
+}
+
+
+.form-section:last-of-type {
+
+    margin-bottom: 10px;
+
+}
+
+
+
+/* =====================================================
+   SECTION TITLE
+===================================================== */
+
+.section-title {
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 7px;
+
+    margin-bottom: 11px;
+
+}
+
+
+.section-icon {
+
+    width: 21px;
+
+    height: 21px;
+
+    min-width: 21px;
+
+    border-radius: 50%;
+
+    background: #4380bd;
+
+    color: #ffffff;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 9px;
+
+}
+
+
+.section-title h2 {
+
+    color: #285c8e;
+
+    font-size: 10px;
+
+    font-weight: 600;
+
+    line-height: 1.5;
+
+}
+
+
+.section-line {
+
+    width: 72px;
+
+    height: 2px;
+
+    background: #4c82b6;
+
+    margin-top: 2px;
+
+}
+
+
+
+/* =====================================================
+   FIELDS
+===================================================== */
+
+.field {
+
+    width: 100%;
+
+}
+
+
+.field label {
+
+    display: block;
+
+    color: #244e78;
+
+    font-size: 7px;
+
+    font-weight: 600;
+
+    margin-bottom: 5px;
+
+}
+
+
+.field label i {
+
+    color: #3c76ac;
+
+    font-size: 7px;
+
+    margin-right: 3px;
+
+}
+
+
+
+/* =====================================================
+   INPUT
+===================================================== */
+
+.input-box {
+
+    width: 100%;
+
+    height: 29px;
+
+    background: #ffffff;
+
+    border: 1px solid #e0e5ea;
+
+    border-radius: 5px;
+
+    display: flex;
+
+    align-items: center;
+
+}
+
+
+.input-box > i {
+
+    color: #4a7fb5;
+
+    font-size: 8px;
+
+    width: 26px;
+
+    text-align: center;
+
+}
+
+
+.input-box input {
+
+    width: 100%;
+
+    height: 100%;
+
+    border: none;
+
+    outline: none;
+
+    background: transparent;
+
+    color: #52616f;
+
+    font-family: "Poppins", Arial, sans-serif;
+
+    font-size: 8px;
+
+    padding: 0 8px;
+
+}
+
+
+.input-box input:focus {
+
+    outline: none;
+
+}
+
+
+
+/* =====================================================
+   FIXTURES GRID
+===================================================== */
+
+.fields-grid {
+
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    column-gap: 14px;
+
+    row-gap: 10px;
+
+}
+
+
+
+/* =====================================================
+   ROOMS
+===================================================== */
+
+.rooms-section {
+
+    padding-bottom: 14px;
+
+}
+
+
+.rooms-options {
+
+    display: grid;
+
+    grid-template-columns:
+        1fr
+        1fr
+        1fr;
+
+    align-items: center;
+
+    gap: 7px;
+
+}
+
+
+.check-option {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 4px;
+
+    cursor: pointer;
+
+    color: #345f87;
+
+    font-size: 7px;
+
+    white-space: nowrap;
+
+}
+
+
+.check-option input {
+
+    display: none;
+
+}
+
+
+.custom-checkbox {
+
+    width: 9px;
+
+    height: 9px;
+
+    border: 1px solid #9aa9b7;
+
+    border-radius: 2px;
+
+    background: #ffffff;
+
+    display: inline-block;
+
+    position: relative;
+
+}
+
+
+.check-option input:checked
++ .custom-checkbox {
+
+    background: #3978b4;
+
+    border-color: #3978b4;
+
+}
+
+
+.check-option input:checked
++ .custom-checkbox::after {
+
+    content: "✓";
+
+    position: absolute;
+
+    color: white;
+
+    font-size: 7px;
+
+    left: 1px;
+
+    top: -2px;
+
+}
+
+
+.check-option i {
+
+    color: #3978b4;
+
+    font-size: 7px;
+
+}
+
+
+
+/* =====================================================
+   TEXTAREA
+===================================================== */
+
+textarea {
+
+    width: 100%;
+
+    height: 57px;
+
+    resize: vertical;
+
+    border: 1px solid #e0e5ea;
+
+    border-radius: 5px;
+
+    outline: none;
+
+    padding: 9px;
+
+    background: #ffffff;
+
+    color: #53616d;
+
+    font-family: "Poppins", Arial, sans-serif;
+
+    font-size: 7px;
+
+}
+
+
+textarea::placeholder {
+
+    color: #8b939b;
+
+}
+
+
+textarea:focus {
+
+    border-color: #4380bd;
+
+}
+
+
+
+/* =====================================================
+   GENERATE BUTTON
+===================================================== */
+
+.generate-container {
+
+    width: 100%;
+
+    display: flex;
+
+    justify-content: center;
+
+    padding-top: 1px;
+
+}
+
+
+.generate-button {
+
+    width: 227px;
+
+    height: 33px;
+
+    border: none;
+
+    border-radius: 18px;
+
+    background: linear-gradient(
+        100deg,
+        #4380bd 0%,
+        #12385f 100%
+    );
+
+    color: #ffffff;
+
+    font-family: "Poppins", Arial, sans-serif;
+
+    font-size: 8px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 5px;
+
+    box-shadow:
+        0 5px 13px rgba(
+            40,
+            93,
+            145,
+            0.22
+        );
+
+    transition: 0.2s ease;
+
+}
+
+
+.generate-button i {
+
+    font-size: 8px;
+
+}
+
+
+.generate-button:hover {
+
+    transform: translateY(-1px);
+
+    box-shadow:
+        0 7px 16px rgba(
+            40,
+            93,
+            145,
+            0.28
+        );
+
+}
+
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 700px) {
+
+    .planner-navbar {
+
+        height: auto;
+
+        padding: 9px 15px;
+
+        flex-wrap: wrap;
+
+        gap: 8px;
+
+    }
+
+
+    .planner-logo {
+
+        margin-right: 15px;
+
+    }
+
+
+    .planner-nav-links {
+
+        gap: 10px;
+
+        flex-wrap: wrap;
+
+    }
+
+
+    .logout-link {
+
+        margin-left: 0;
+
+    }
+
+
+    .planner-header {
+
+        height: 115px;
+
+        padding: 0 15px;
+
+    }
+
+
+    .planner-header h1 {
+
+        font-size: 21px;
+
+    }
+
+
+    .home-planner-form {
+
+        width: calc(100% - 30px);
+
+    }
+
+
+    .fields-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .rooms-options {
+
+        grid-template-columns: 1fr;
+
+    }
+
+}

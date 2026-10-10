@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Party Budget Planner - PocketSmart</title>
+
+
+    <!-- Google Font -->
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+          rel="stylesheet">
+
+
+    <!-- Font Awesome -->
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+
+    <!-- Party Planner CSS -->
+
+    <link rel="stylesheet"
+          href="/static/party_planner.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- =================================================
+         NAVBAR
+    ================================================== -->
+
+    <nav class="party-navbar">
+
+
+        <!-- LOGO -->
+
+        <a href="/dashboard"
+           class="party-logo">
+
+            <span class="party-logo-icon">
+                <i class="fa-solid fa-folder"></i>
+            </span>
+
+            PocketSmart
+
+        </a>
+
+
+
+        <!-- NAVIGATION -->
+
+        <div class="party-nav-links">
+
+            <a href="/home-planner">
+
+                <i class="fa-solid fa-house"></i>
+
+                Home Planner
+
+            </a>
+
+
+            <a href="/party-planner"
+               class="active">
+
+                <i class="fa-solid fa-people-group"></i>
+
+                Party Planner
+
+            </a>
+
+
+            <a href="/jewelry-planner">
+
+                <i class="fa-solid fa-gem"></i>
+
+                Jewelry Planner
+
+            </a>
+
+
+            <a href="/history">
+
+                <i class="fa-solid fa-clock-rotate-left"></i>
+
+                History
+
+            </a>
+
+
+            <a href="/logout">
+
+                <i class="fa-solid fa-right-from-bracket"></i>
+
+                Logout
+
+            </a>
+
+        </div>
+
+    </nav>
+
+
+
+    <!-- =================================================
+         HEADER
+    ================================================== -->
+
+    <section class="party-header">
+
+        <h1>
+            Party Budget Planner
+        </h1>
+
+        <p>
+            Plan your perfect event with AI-powered budget recommendations
+        </p>
+
+    </section>
+
+
+
+    <!-- =================================================
+         MAIN FORM
+    ================================================== -->
+
+    <main class="party-main">
+
+
+        <form
+            action="/party-planner"
+            method="post"
+            class="party-form">
+
+
+            <!-- =================================================
+                 BASIC INFORMATION
+            ================================================== -->
+
+            <section class="party-section">
+
+
+                <div class="party-section-title">
+
+                    <div class="party-section-icon">
+
+                        <i class="fa-solid fa-dollar-sign"></i>
+
+                    </div>
+
+                    <div>
+
+                        <h2>
+                            Basic Information
+                        </h2>
+
+                        <div class="party-section-line"></div>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="party-two-columns">
+
+
+                    <!-- TOTAL BUDGET -->
+
+                    <div class="party-field">
+
+                        <label for="budget">
+
+                            Total Budget (₹)
+
+                        </label>
+
+
+                        <div class="party-input">
+
+                            <i class="fa-solid fa-money-bill-wave"></i>
+
+                            <input
+                                type="number"
+                                id="budget"
+                                name="budget"
+                                value="5000"
+                                min="0">
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- NUMBER OF GUESTS -->
+
+                    <div class="party-field">
+
+                        <label for="guests">
+
+                            Number of Guests
+
+                        </label>
+
+
+                        <div class="party-input">
+
+                            <i class="fa-solid fa-users"></i>
+
+                            <input
+                                type="number"
+                                id="guests"
+                                name="guests"
+                                value="3"
+                                min="1">
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 EVENT DETAILS
+            ================================================== -->
+
+            <section class="party-section">
+
+
+                <div class="party-section-title">
+
+                    <div class="party-section-icon">
+
+                        <i class="fa-solid fa-calendar-days"></i>
+
+                    </div>
+
+                    <div>
+
+                        <h2>
+                            Event Details
+                        </h2>
+
+                        <div class="party-section-line"></div>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="party-two-columns">
+
+
+                    <!-- PARTY TYPE -->
+
+                    <select name="event_type" required>
+
+    <option value="Wedding">Wedding</option>
+    <option value="Birthday">Birthday</option>
+    <option value="Engagement">Engagement</option>
+    <option value="Other">Other</option>
+
+</select>
+
+
+
+                    <!-- VENUE -->
+
+                    <select name="venue" required>
+
+    <option value="Home">Home</option>
+    <option value="Hall">Hall</option>
+    <option value="Outdoor">Outdoor</option>
+
+</select>
+
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 PARTY NEEDS
+            ================================================== -->
+
+            <section class="party-section">
+
+
+                <div class="party-section-title">
+
+                    <div class="party-section-icon">
+
+                        <i class="fa-solid fa-list-check"></i>
+
+                    </div>
+
+                    <div>
+
+                        <h2>
+                            Party Needs
+                        </h2>
+
+                        <div class="party-section-line"></div>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="party-needs">
+
+
+                    <!-- CATERING -->
+
+                    <label class="party-need catering">
+
+                        <input
+                            type="checkbox"
+                            name="party_needs"
+                            value="catering"
+                            checked>
+
+                        <span class="party-check"></span>
+
+                        <span class="need-icon">
+
+                            <i class="fa-solid fa-utensils"></i>
+
+                        </span>
+
+                        <span class="need-text">
+                            Catering
+                        </span>
+
+                    </label>
+
+
+
+                    <!-- DECORATION -->
+
+                    <label class="party-need decoration">
+
+                        <input
+                            type="checkbox"
+                            name="party_needs"
+                            value="decoration">
+
+                        <span class="party-check"></span>
+
+                        <span class="need-icon">
+
+                            <i class="fa-solid fa-palette"></i>
+
+                        </span>
+
+                        <span class="need-text">
+                            Decoration
+                        </span>
+
+                    </label>
+
+
+
+                    <!-- ENTERTAINMENT -->
+
+                    <label class="party-need entertainment">
+
+                        <input
+                            type="checkbox"
+                            name="party_needs"
+                            value="entertainment"
+                            checked>
+
+                        <span class="party-check"></span>
+
+                        <span class="need-icon">
+
+                            <i class="fa-solid fa-music"></i>
+
+                        </span>
+
+                        <span class="need-text">
+                            Entertainment
+                        </span>
+
+                    </label>
+
+
+                </div>
+
+
+            </section>
+
+
+
+            <!-- =================================================
+                 ADDITIONAL REQUIREMENTS
+            ================================================== -->
+
+            <section class="party-section">
+
+
+                <div class="party-section-title">
+
+                    <div class="party-section-icon">
+
+                        <i class="fa-solid fa-circle-info"></i>
+
+                    </div>
+
+                    <div>
+
+                        <h2>
+                            Additional Requirements
+                        </h2>
+
+                        <div class="party-section-line"></div>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="party-field">
+
+                    <textarea
+                        name="requirements"
+                        id="requirements"
+                        placeholder="Special requests, themes, dietary restrictions, etc."></textarea>
+
+                </div>
+
+
+            </section>
+
+
+
+            <!-- =================================================
+                 GENERATE BUTTON
+            ================================================== -->
+
+            <div class="generate-party-container">
+
+                <button
+                    type="submit"
+                    class="generate-party-button">
+
+                    <i class="fa-solid fa-calculator"></i>
+
+                    Generate Budget Plan
+
+                </button>
+
+            </div>
+
+
+        </form>
+
+
+    </main>
+
+
+
+    <!-- =================================================
+         FOOTER
+    ================================================== -->
+
+    <footer class="party-footer">
+
+        © 2025 PocketSmart. All rights reserved.
+
+    </footer>
+
+
+</body>
+
+</html>

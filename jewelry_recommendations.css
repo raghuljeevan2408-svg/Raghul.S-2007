@@ -1,0 +1,449 @@
+* {
+    box-sizing: border-box;
+}
+
+
+body {
+    margin: 0;
+
+    font-family: Arial, sans-serif;
+
+    background: #f4f6f8;
+
+    color: #333;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.header {
+    background: #0f315b;
+
+    color: white;
+
+    padding: 18px 40px;
+}
+
+
+.header h2 {
+    margin: 0;
+
+    font-size: 21px;
+}
+
+
+.header p {
+    margin: 4px 0 0;
+
+    font-size: 12px;
+}
+
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.container {
+    width: 90%;
+
+    max-width: 850px;
+
+    margin: 30px auto;
+}
+
+
+/* =========================================================
+   TITLE
+========================================================= */
+
+.title-section {
+    text-align: center;
+
+    margin-bottom: 20px;
+}
+
+
+.title-section h1 {
+    color: #123f73;
+
+    font-size: 22px;
+
+    margin-bottom: 15px;
+}
+
+
+.generate-btn {
+    display: inline-block;
+
+    background: #155a91;
+
+    color: white;
+
+    text-decoration: none;
+
+    padding: 9px 18px;
+
+    border-radius: 20px;
+
+    font-size: 12px;
+
+    font-weight: bold;
+}
+
+
+.generate-btn:hover {
+    background: #0d4775;
+}
+
+
+/* =========================================================
+   CARD
+========================================================= */
+
+.card {
+    background: white;
+
+    border-radius: 8px;
+
+    margin-bottom: 12px;
+
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+
+    overflow: hidden;
+}
+
+
+/* =========================================================
+   SECTION HEADER
+========================================================= */
+
+.section-header {
+    background: #155a91;
+
+    color: white;
+
+    padding: 10px 13px;
+
+    font-size: 13px;
+
+    font-weight: bold;
+}
+
+
+/* =========================================================
+   BUDGET
+========================================================= */
+
+.budget-row {
+    display: flex;
+
+    justify-content: space-between;
+
+    padding: 15px;
+}
+
+
+.budget-row div {
+    width: 48%;
+
+    font-size: 11px;
+}
+
+
+.budget-row strong {
+    display: block;
+
+    font-size: 10px;
+
+    margin-bottom: 5px;
+}
+
+
+.budget-row span {
+    color: #16803a;
+
+    font-size: 12px;
+
+    font-weight: bold;
+}
+
+
+.budget-row div:first-child span {
+    color: #155a91;
+}
+
+
+/* =========================================================
+   OUTFIT
+========================================================= */
+
+.outfit-row {
+    display: flex;
+
+    gap: 10px;
+
+    margin: 12px;
+
+    padding: 12px;
+
+    background: #eef3f8;
+
+    border-radius: 5px;
+}
+
+
+.outfit-row div {
+    flex: 1;
+
+    font-size: 10px;
+
+    color: #333;
+}
+
+
+.outfit-row strong {
+    font-size: 10px;
+}
+
+
+/* =========================================================
+   JEWELRY LIST
+========================================================= */
+
+.jewelry-list {
+    padding: 5px 15px;
+}
+
+
+.jewelry-item {
+    padding: 15px 5px;
+
+    border-bottom: 1px solid #e1e5ea;
+}
+
+
+.jewelry-item:last-child {
+    border-bottom: none;
+}
+
+
+.jewelry-name {
+    display: flex;
+
+    align-items: center;
+
+    gap: 6px;
+
+    font-size: 13px;
+}
+
+
+.circle {
+    color: #155a91;
+
+    font-size: 20px;
+}
+
+
+.price {
+    margin-left: auto;
+
+    background: #1677e8;
+
+    color: white;
+
+    padding: 5px 9px;
+
+    border-radius: 4px;
+
+    font-size: 11px;
+
+    font-weight: bold;
+}
+
+
+.jewelry-item p {
+    font-size: 10px;
+
+    line-height: 1.5;
+
+    margin: 7px 0;
+
+    color: #444;
+}
+
+
+/* =========================================================
+   SHOPPING
+========================================================= */
+
+.shop-title {
+    font-size: 10px;
+
+    font-weight: bold;
+
+    margin-top: 8px;
+
+    margin-bottom: 5px;
+}
+
+
+.shopping-links {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 5px;
+}
+
+
+.shopping-links a,
+.disabled-link {
+    background: #eef3f8;
+
+    color: #155a91;
+
+    text-decoration: none;
+
+    padding: 4px 7px;
+
+    border-radius: 3px;
+
+    font-size: 9px;
+}
+
+
+.shopping-links a:hover {
+    background: #dce8f2;
+}
+
+
+.disabled-link {
+    opacity: 0.7;
+}
+
+
+/* =========================================================
+   STYLING TIPS
+========================================================= */
+
+.styling-card ul {
+    margin: 0;
+
+    padding: 12px 30px 15px;
+}
+
+
+.styling-card li {
+    font-size: 10px;
+
+    margin-bottom: 7px;
+
+    color: #555;
+}
+
+
+/* =========================================================
+   ERROR
+========================================================= */
+
+.error-card {
+    background: white;
+
+    padding: 20px;
+
+    border-radius: 8px;
+
+    color: #b42318;
+
+    white-space: pre-wrap;
+}
+
+
+/* =========================================================
+   BACK
+========================================================= */
+
+.back-section {
+    text-align: center;
+
+    margin: 25px 0;
+}
+
+
+.back-section a {
+    display: inline-block;
+
+    background: #2563eb;
+
+    color: white;
+
+    text-decoration: none;
+
+    padding: 9px 16px;
+
+    border-radius: 5px;
+
+    font-size: 12px;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer {
+    background: #0f315b;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 20px;
+
+    margin-top: 30px;
+}
+
+
+footer h3 {
+    margin: 0 0 5px;
+
+    font-size: 16px;
+}
+
+
+footer p {
+    margin: 0;
+
+    color: #cbd5e1;
+
+    font-size: 11px;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .container {
+        width: 94%;
+    }
+
+    .outfit-row {
+        flex-direction: column;
+    }
+
+    .budget-row {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .budget-row div {
+        width: 100%;
+    }
+
+}

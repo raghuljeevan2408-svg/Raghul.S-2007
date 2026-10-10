@@ -1,0 +1,730 @@
+/* =========================================
+   RESET
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    margin: 0;
+    padding: 0;
+
+    font-family: "Poppins", Arial, sans-serif;
+
+    color: #173f68;
+
+    background: white;
+}
+
+
+
+/* =========================================
+   NAVBAR
+========================================= */
+
+.navbar {
+    width: 100%;
+    height: 58px;
+
+    background: #173e66;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 32px;
+}
+
+
+.logo {
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 21px;
+
+    font-weight: 700;
+}
+
+
+.nav-links {
+    display: flex;
+    align-items: center;
+
+    gap: 34px;
+}
+
+
+.nav-links a {
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 12px;
+
+    font-weight: 500;
+}
+
+
+.nav-links a:hover {
+    opacity: 0.8;
+}
+
+
+.nav-button {
+    padding: 10px 22px;
+
+    border-radius: 22px;
+
+    background: linear-gradient(
+        110deg,
+        #4d86c7,
+        #12385f
+    );
+
+    box-shadow:
+        0 5px 13px rgba(0, 0, 0, 0.18);
+}
+
+
+
+/* =========================================
+   TESTIMONIAL AREA
+========================================= */
+
+.testimonial-area {
+    width: 100%;
+
+    background: #f1f4fa;
+
+    padding: 53px 0 50px;
+}
+
+
+
+/* =========================================
+   HEADING
+========================================= */
+
+.testimonial-heading {
+    width: 100%;
+
+    text-align: center;
+
+    margin-bottom: 30px;
+}
+
+
+.testimonial-heading h1 {
+    color: #17416b;
+
+    font-size: 27px;
+
+    font-weight: 600;
+
+    line-height: 1.2;
+
+    margin-bottom: 10px;
+}
+
+
+.yellow-line {
+    width: 53px;
+
+    height: 4px;
+
+    background: #e8b933;
+
+    border-radius: 5px;
+
+    margin: 0 auto 11px;
+}
+
+
+.testimonial-heading p {
+    color: #6c7886;
+
+    font-size: 11px;
+
+    font-weight: 400;
+
+    line-height: 1.5;
+}
+
+
+
+/* =========================================
+   TESTIMONIAL CARDS
+========================================= */
+
+.testimonial-cards {
+    width: calc(100% - 96px);
+
+    max-width: 1440px;
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 24px;
+}
+
+
+.testimonial-card {
+    position: relative;
+
+    min-height: 205px;
+
+    background: white;
+
+    border-radius: 10px;
+
+    padding: 25px 28px 20px;
+
+    box-shadow:
+        0 8px 25px rgba(
+            25,
+            62,
+            102,
+            0.10
+        );
+}
+
+
+
+/* =========================================
+   QUOTE
+========================================= */
+
+.quote-mark {
+    position: absolute;
+
+    left: 17px;
+
+    top: 5px;
+
+    color: #e8f0f8;
+
+    font-family: Georgia, serif;
+
+    font-size: 47px;
+
+    font-weight: bold;
+
+    line-height: 1;
+}
+
+
+.testimonial-text {
+    position: relative;
+
+    z-index: 1;
+
+    color: #68727d;
+
+    font-size: 12px;
+
+    font-style: italic;
+
+    line-height: 1.5;
+
+    margin: 5px 0 31px;
+}
+
+
+
+/* =========================================
+   USER
+========================================= */
+
+.user-info {
+    display: flex;
+
+    align-items: center;
+
+    gap: 11px;
+}
+
+
+.user-avatar {
+    width: 39px;
+
+    height: 39px;
+
+    border-radius: 50%;
+
+    background: #edf4fa;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    color: #3575ae;
+
+    font-size: 15px;
+}
+
+
+.user-details h3 {
+    color: #143f69;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    margin-bottom: 3px;
+}
+
+
+.user-details span {
+    color: #17446e;
+
+    font-size: 10px;
+}
+
+
+
+/* =========================================
+   CTA SECTION
+========================================= */
+
+.cta-section {
+    width: 100%;
+
+    min-height: 458px;
+
+    background: linear-gradient(
+        110deg,
+        #3b70a8 0%,
+        #1b416d 100%
+    );
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 70px 30px;
+}
+
+
+.cta-content {
+    width: 100%;
+
+    max-width: 1100px;
+
+    margin: 0 auto;
+
+    text-align: center;
+}
+
+
+.cta-content h2 {
+    color: white;
+
+    font-size: 51px;
+
+    font-weight: 700;
+
+    line-height: 1.2;
+
+    margin: 0 0 31px;
+}
+
+
+.cta-content p {
+    max-width: 1050px;
+
+    margin: 0 auto 47px;
+
+    color: #e9f1f9;
+
+    font-size: 22px;
+
+    line-height: 1.55;
+
+    text-align: center;
+}
+
+
+
+/* =========================================
+   CTA BUTTONS
+========================================= */
+
+.cta-buttons {
+    width: 100%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 31px;
+}
+
+
+.cta-signin {
+    width: 150px;
+
+    height: 63px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: #f4f5f7;
+
+    color: #183e65;
+
+    text-decoration: none;
+
+    border-radius: 32px;
+
+    font-size: 18px;
+
+    font-weight: 600;
+}
+
+
+.cta-create {
+    width: 230px;
+
+    height: 63px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: linear-gradient(
+        110deg,
+        #4783c5 0%,
+        #12385f 100%
+    );
+
+    color: white;
+
+    text-decoration: none;
+
+    border-radius: 32px;
+
+    font-size: 18px;
+
+    font-weight: 600;
+
+    box-shadow:
+        0 6px 18px rgba(
+            0,
+            0,
+            0,
+            0.20
+        );
+}
+
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.site-footer {
+    width: 100%;
+
+    background: #14385d;
+
+    color: white;
+
+    padding-top: 25px;
+
+    padding-bottom: 12px;
+}
+
+
+.footer-container {
+    width: 92%;
+
+    max-width: 1080px;
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns:
+        2.3fr
+        1fr
+        1fr
+        1fr
+        1fr;
+
+    column-gap: 40px;
+}
+
+
+
+/* =========================================
+   FOOTER BRAND
+========================================= */
+
+.footer-brand {
+    padding-right: 25px;
+}
+
+
+.footer-brand h2 {
+    margin: 0 0 5px;
+
+    color: white;
+
+    font-size: 15px;
+
+    font-weight: 600;
+}
+
+
+.footer-brand p {
+    max-width: 210px;
+
+    margin: 0;
+
+    color: #d2dce7;
+
+    font-size: 6.5px;
+
+    line-height: 1.55;
+}
+
+
+
+/* =========================================
+   SOCIAL ICONS
+========================================= */
+
+.social-icons {
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    margin-top: 9px;
+}
+
+
+.social-icons a {
+    width: 14px;
+
+    height: 14px;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: rgba(
+        255,
+        255,
+        255,
+        0.12
+    );
+
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 6px;
+}
+
+
+
+/* =========================================
+   FOOTER COLUMNS
+========================================= */
+
+.footer-column {
+    display: flex;
+
+    flex-direction: column;
+}
+
+
+.footer-column h3 {
+    margin: 0 0 7px;
+
+    color: white;
+
+    font-size: 7px;
+
+    font-weight: 600;
+}
+
+
+.footer-column a {
+    color: #cbd7e3;
+
+    text-decoration: none;
+
+    font-size: 6px;
+
+    line-height: 1.9;
+}
+
+
+.footer-column a:hover {
+    color: white;
+}
+
+
+
+/* =========================================
+   COPYRIGHT
+========================================= */
+
+.footer-bottom {
+    width: 92%;
+
+    max-width: 1080px;
+
+    margin: 20px auto 0;
+
+    padding-top: 9px;
+
+    border-top:
+        1px solid rgba(
+            255,
+            255,
+            255,
+            0.08
+        );
+
+    text-align: center;
+}
+
+
+.footer-bottom p {
+    margin: 0;
+
+    color: #9eafc1;
+
+    font-size: 6px;
+}
+
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 900px) {
+
+    .testimonial-cards {
+        width: calc(100% - 40px);
+
+        grid-template-columns: 1fr;
+
+        max-width: 600px;
+    }
+
+
+    .cta-content h2 {
+        font-size: 40px;
+    }
+
+
+    .cta-content p {
+        font-size: 18px;
+    }
+
+
+    .footer-container {
+        grid-template-columns:
+            repeat(2, 1fr);
+
+        row-gap: 25px;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .navbar {
+        height: auto;
+
+        padding: 14px 20px;
+
+        flex-direction: column;
+
+        gap: 12px;
+    }
+
+
+    .nav-links {
+        gap: 15px;
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+    }
+
+
+    .testimonial-heading h1 {
+        font-size: 23px;
+    }
+
+
+    .cta-section {
+        min-height: 430px;
+
+        padding: 55px 20px;
+    }
+
+
+    .cta-content h2 {
+        font-size: 31px;
+    }
+
+
+    .cta-content p {
+        font-size: 16px;
+    }
+
+
+    .cta-buttons {
+        flex-direction: column;
+
+        gap: 15px;
+    }
+
+
+    .footer-container {
+        grid-template-columns: 1fr;
+
+        row-gap: 20px;
+    }
+
+}

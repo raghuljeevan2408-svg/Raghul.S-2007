@@ -1,0 +1,886 @@
+/* =====================================================
+   RESET
+===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    margin: 0;
+
+    background: #ffffff;
+
+    color: #234f79;
+
+    font-family: "Poppins", Arial, sans-serif;
+}
+
+
+
+/* =====================================================
+   NAVBAR
+===================================================== */
+
+.jewelry-navbar {
+
+    width: 100%;
+
+    height: 38px;
+
+    background: #12375d;
+
+    display: flex;
+
+    align-items: center;
+
+    padding: 0 17px;
+
+}
+
+
+.jewelry-logo {
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 4px;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    margin-right: 24px;
+
+}
+
+
+.jewelry-logo-icon {
+
+    color: #ffffff;
+
+    font-size: 9px;
+
+}
+
+
+.jewelry-nav-links {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+}
+
+
+.jewelry-nav-links a {
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    font-size: 6px;
+
+    font-weight: 500;
+
+    white-space: nowrap;
+
+    padding: 4px 5px;
+
+    border-radius: 3px;
+
+}
+
+
+.jewelry-nav-links a i {
+
+    font-size: 6px;
+
+    margin-right: 2px;
+
+}
+
+
+.jewelry-nav-links a.active {
+
+    color: #ffab18;
+
+}
+
+
+.jewelry-nav-links a:hover {
+
+    opacity: 0.85;
+
+}
+
+
+.jewelry-logout {
+
+    margin-left: auto;
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    font-size: 6px;
+
+    font-weight: 500;
+
+}
+
+
+.jewelry-logout i {
+
+    margin-right: 2px;
+
+}
+
+
+
+/* =====================================================
+   PAGE HEADER
+===================================================== */
+
+.jewelry-header {
+
+    width: 100%;
+
+    height: 86px;
+
+    background: linear-gradient(
+        110deg,
+        #3e73ac 0%,
+        #1a4069 100%
+    );
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    color: #ffffff;
+
+}
+
+
+.jewelry-header h1 {
+
+    font-size: 20px;
+
+    font-weight: 700;
+
+    line-height: 1.2;
+
+    margin-bottom: 5px;
+
+}
+
+
+.jewelry-header p {
+
+    font-size: 7px;
+
+    color: #e7eef6;
+
+}
+
+
+
+/* =====================================================
+   MAIN
+===================================================== */
+
+.jewelry-main {
+
+    width: 100%;
+
+    min-height: 600px;
+
+    background: #ffffff;
+
+    padding: 14px 0 22px;
+
+    display: flex;
+
+    justify-content: center;
+
+}
+
+
+
+/* =====================================================
+   FORM
+===================================================== */
+
+.jewelry-form {
+
+    width: 428px;
+
+    background: #ffffff;
+
+    border-radius: 8px;
+
+    padding: 15px;
+
+    box-shadow:
+        0 6px 22px rgba(
+            25,
+            60,
+            100,
+            0.11
+        );
+
+}
+
+
+
+/* =====================================================
+   SECTIONS
+===================================================== */
+
+.jewelry-section {
+
+    width: 100%;
+
+    background: #f2f4f8;
+
+    border-radius: 5px;
+
+    padding: 11px;
+
+    margin-bottom: 10px;
+
+}
+
+
+.occasion-section {
+
+    padding-bottom: 13px;
+
+}
+
+
+.upload-section {
+
+    padding-bottom: 12px;
+
+}
+
+
+
+/* =====================================================
+   SECTION TITLE
+===================================================== */
+
+.jewelry-section-title {
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 6px;
+
+    margin-bottom: 9px;
+
+}
+
+
+.jewelry-section-icon {
+
+    width: 19px;
+
+    height: 19px;
+
+    min-width: 19px;
+
+    border-radius: 50%;
+
+    background: #4380bd;
+
+    color: #ffffff;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 8px;
+
+}
+
+
+.jewelry-section-title h2 {
+
+    color: #2b5e8d;
+
+    font-size: 9px;
+
+    font-weight: 600;
+
+    line-height: 1.45;
+
+}
+
+
+.jewelry-title-line {
+
+    width: 68px;
+
+    height: 2px;
+
+    background: #4a82b8;
+
+    margin-top: 2px;
+
+}
+
+
+
+/* =====================================================
+   FIELDS
+===================================================== */
+
+.jewelry-field {
+
+    width: 100%;
+
+}
+
+
+.jewelry-field label {
+
+    display: block;
+
+    color: #28547e;
+
+    font-size: 6.5px;
+
+    font-weight: 600;
+
+    margin-bottom: 4px;
+
+}
+
+
+.jewelry-field label i {
+
+    color: #3977b1;
+
+    margin-right: 3px;
+
+    font-size: 6px;
+
+}
+
+
+
+/* =====================================================
+   INPUT
+===================================================== */
+
+.jewelry-input {
+
+    width: 100%;
+
+    height: 25px;
+
+    background: #ffffff;
+
+    border: 1px solid #dce2e7;
+
+    border-radius: 4px;
+
+    display: flex;
+
+    align-items: center;
+
+}
+
+
+.jewelry-input > i {
+
+    width: 24px;
+
+    min-width: 24px;
+
+    text-align: center;
+
+    color: #3f78b1;
+
+    font-size: 7px;
+
+}
+
+
+.jewelry-input input,
+.jewelry-input select {
+
+    width: 100%;
+
+    height: 100%;
+
+    border: none;
+
+    outline: none;
+
+    background: transparent;
+
+    color: #5b6670;
+
+    font-family: "Poppins", Arial, sans-serif;
+
+    font-size: 6.5px;
+
+    padding-right: 6px;
+
+}
+
+
+.jewelry-input select {
+
+    appearance: auto;
+
+}
+
+
+
+/* =====================================================
+   OCCASION
+===================================================== */
+
+.occasion-input {
+
+    width: 184px;
+
+}
+
+
+.occasion-input select {
+
+    padding-left: 7px;
+
+}
+
+
+
+/* =====================================================
+   STYLE PREFERENCES
+===================================================== */
+
+.style-field {
+
+    margin-top: 8px;
+
+}
+
+
+.style-field textarea {
+
+    width: 100%;
+
+    height: 45px;
+
+    resize: vertical;
+
+    border: 1px solid #dce2e7;
+
+    border-radius: 4px;
+
+    outline: none;
+
+    background: #ffffff;
+
+    padding: 7px;
+
+    font-family: "Poppins", Arial, sans-serif;
+
+    font-size: 6.5px;
+
+    color: #58636d;
+
+}
+
+
+.style-field textarea::placeholder {
+
+    color: #89929a;
+
+}
+
+
+.style-field textarea:focus {
+
+    border-color: #4380bd;
+
+}
+
+
+
+/* =====================================================
+   UPLOAD AREA
+===================================================== */
+
+.upload-area {
+
+    width: 100%;
+
+    position: relative;
+
+    min-height: 146px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+}
+
+
+.image-preview {
+
+    width: 255px;
+
+    height: 144px;
+
+    background: #ffffff;
+
+    border: 1px solid #dfe4e8;
+
+    border-radius: 4px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    overflow: hidden;
+
+    cursor: pointer;
+
+    position: relative;
+
+}
+
+
+.image-preview img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+}
+
+
+.upload-placeholder {
+
+    position: absolute;
+
+    inset: 0;
+
+    display: none;
+
+    align-items: center;
+
+    justify-content: center;
+
+    flex-direction: column;
+
+    gap: 6px;
+
+    color: #6f8498;
+
+    font-size: 7px;
+
+}
+
+
+.upload-placeholder i {
+
+    font-size: 17px;
+
+    color: #4380bd;
+
+}
+
+
+
+/* =====================================================
+   REMOVE IMAGE
+===================================================== */
+
+.remove-image {
+
+    position: absolute;
+
+    right: 23px;
+
+    top: 64px;
+
+    border: none;
+
+    border-radius: 3px;
+
+    background: #727f89;
+
+    color: #ffffff;
+
+    padding: 5px 7px;
+
+    font-family: "Poppins", Arial, sans-serif;
+
+    font-size: 6px;
+
+    cursor: pointer;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 3px;
+
+}
+
+
+.remove-image i {
+
+    font-size: 6px;
+
+}
+
+
+.remove-image:hover {
+
+    background: #5e6a73;
+
+}
+
+
+
+/* =====================================================
+   RECOMMENDATION BUTTON
+===================================================== */
+
+.recommendation-container {
+
+    width: 100%;
+
+    display: flex;
+
+    justify-content: center;
+
+    padding-top: 0;
+
+}
+
+
+.recommendation-button {
+
+    width: 163px;
+
+    height: 28px;
+
+    border: none;
+
+    border-radius: 17px;
+
+    background: linear-gradient(
+        100deg,
+        #4380bd 0%,
+        #12385e 100%
+    );
+
+    color: #ffffff;
+
+    font-family: "Poppins", Arial, sans-serif;
+
+    font-size: 7px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 5px;
+
+    box-shadow:
+        0 4px 11px rgba(
+            35,
+            85,
+            140,
+            0.25
+        );
+
+}
+
+
+.recommendation-button i {
+
+    font-size: 7px;
+
+}
+
+
+.recommendation-button:hover {
+
+    transform: translateY(-1px);
+
+}
+
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+.jewelry-footer {
+
+    width: 100%;
+
+    height: 31px;
+
+    background: #12375d;
+
+    color: #dbe5ee;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 6px;
+
+}
+
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 700px) {
+
+    .jewelry-navbar {
+
+        height: auto;
+
+        padding: 8px 12px;
+
+        flex-wrap: wrap;
+
+        gap: 7px;
+
+    }
+
+
+    .jewelry-logo {
+
+        margin-right: 8px;
+
+    }
+
+
+    .jewelry-nav-links {
+
+        flex-wrap: wrap;
+
+        gap: 7px;
+
+    }
+
+
+    .jewelry-logout {
+
+        margin-left: 0;
+
+    }
+
+
+    .jewelry-header {
+
+        height: 100px;
+
+        padding: 0 15px;
+
+    }
+
+
+    .jewelry-header h1 {
+
+        font-size: 19px;
+
+    }
+
+
+    .jewelry-form {
+
+        width: calc(100% - 30px);
+
+        max-width: 428px;
+
+    }
+
+
+    .occasion-input {
+
+        width: 100%;
+
+    }
+
+
+    .upload-area {
+
+        min-height: 170px;
+
+    }
+
+
+    .image-preview {
+
+        width: 75%;
+
+        height: 145px;
+
+    }
+
+
+    .remove-image {
+
+        right: 4%;
+
+    }
+
+}

@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Home Interior Recommendations - PocketSmart AI</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', path='home_recommendations.css') }}">
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+
+    <header class="top-header">
+
+        <div class="brand">
+            <h2>PocketSmart AI</h2>
+            <p>Smart Budget Planning</p>
+        </div>
+
+    </header>
+
+
+    <!-- ================= MAIN ================= -->
+
+    <main class="container">
+
+        <!-- PAGE TITLE -->
+
+        <section class="page-title">
+
+            <h1>Home Interior Recommendations</h1>
+
+            <p>
+                AI-generated product suggestions for your home
+                interior based on your budget and requirements.
+            </p>
+
+        </section>
+
+
+        <!-- GENERATE AGAIN -->
+
+        <div class="generate-section">
+
+            <a href="/home-planner"
+               class="generate-btn">
+                Generate Recommendations
+            </a>
+
+        </div>
+
+
+        <!-- ================= BUDGET PLAN ================= -->
+
+        <section class="recommendation-section">
+
+            <h2>Your Personalized Budget Plan</h2>
+
+
+            <!-- BUDGET SUMMARY -->
+
+            {% if recommendations is mapping %}
+
+            <div class="budget-card">
+
+                <h3>Budget Summary</h3>
+
+                <div class="budget-details">
+
+                    <div class="budget-box">
+
+                        <span>Total Budget</span>
+
+                        <strong>
+                            ₹{{ recommendations.total_budget }}
+                        </strong>
+
+                    </div>
+
+
+                    <div class="budget-box">
+
+                        <span>Remaining Budget</span>
+
+                        <strong>
+                            ₹{{ recommendations.remaining_budget }}
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- ================= CATEGORIES ================= -->
+
+            {% for category in recommendations.categories %}
+
+            <div class="category-card">
+
+                <!-- CATEGORY HEADER -->
+
+                <div class="category-header">
+
+                    <h3>
+
+                        {% if category.name == "Lighting" %}
+                            💡
+                        {% elif category.name == "Ceiling Fans" %}
+                            🌀
+                        {% elif category.name == "Furniture" %}
+                            🛋️
+                        {% else %}
+                            🏠
+                        {% endif %}
+
+                        {{ category.name }}
+
+                    </h3>
+
+
+                    <span class="allocation">
+
+                        Allocation:
+                        ₹{{ category.allocation }}
+
+                    </span>
+
+                </div>
+
+
+                <!-- ================= TABLE ================= -->
+
+                {% if category["items"] %}
+
+                <div class="table-container">
+
+                    <table>
+
+                        <thead>
+
+                            <tr>
+
+                                <th>Item</th>
+
+                                <th>Description</th>
+
+                                <th>Price</th>
+
+                                <th>Quantity</th>
+
+                                <th>Shopping Links</th>
+
+                            </tr>
+
+                        </thead>
+
+
+                        <tbody>
+
+                            {% for item in category["items"] %}
+
+                            <tr>
+
+                                <td>
+                                    <strong>
+                                        {{ item.item }}
+                                    </strong>
+                                </td>
+
+
+                                <td>
+                                    {{ item.description }}
+                                </td>
+
+
+                                <td>
+                                    ₹{{ item.price }}
+                                </td>
+
+
+                                <td>
+                                    {{ item.quantity }}
+                                </td>
+
+
+                                <td>
+
+                                    <div class="shopping-links">
+
+                                        {% for link in item.shopping_links %}
+
+                                            {% if link.url %}
+
+                                            <a
+                                                href="{{ link.url }}"
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                class="shopping-btn"
+                                            >
+                                                {{ link.label }}
+                                            </a>
+
+                                            {% endif %}
+
+                                        {% endfor %}
+
+                                    </div>
+
+                                </td>
+
+                            </tr>
+
+                            {% endfor %}
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+                {% else %}
+
+                <p class="no-items">
+                    No items available for this category.
+                </p>
+
+                {% endif %}
+
+            </div>
+
+            {% endfor %}
+
+
+            <!-- ================= ADDITIONAL SUGGESTIONS ================= -->
+
+            <div class="suggestions-card">
+
+                <h3>
+                    💡 Additional Suggestions
+                </h3>
+
+
+                <ul>
+
+                    {% for suggestion
+                       in recommendations.additional_suggestions %}
+
+                    <li>
+                        {{ suggestion }}
+                    </li>
+
+                    {% endfor %}
+
+                </ul>
+
+            </div>
+
+
+            {% else %}
+
+            <!-- ================= ERROR / TEXT RESPONSE ================= -->
+
+            <div class="ai-response">
+
+                <h3>AI Recommendations</h3>
+
+                <div class="response-content">
+                    {{ recommendations }}
+                </div>
+
+            </div>
+
+            {% endif %}
+
+
+        </section>
+
+
+        <!-- ================= BACK BUTTON ================= -->
+
+        <div class="bottom-action">
+
+            <a href="/home-planner"
+               class="back-btn">
+
+                ← Back to Home Planner
+
+            </a>
+
+        </div>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <div class="footer-content">
+
+            <h3>PocketSmart AI</h3>
+
+            <p>
+                Smart AI-powered budget planning for everyday needs.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+</body>
+
+</html>

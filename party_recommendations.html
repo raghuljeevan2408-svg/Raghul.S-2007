@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Party Budget Recommendations</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', path='party_recommendations.css') }}">
+
+</head>
+
+
+<body>
+
+
+<!-- HEADER -->
+
+<header class="header">
+
+    <div>
+
+        <h2>PocketSmart AI</h2>
+
+        <p>Smart Budget Planning</p>
+
+    </div>
+
+</header>
+
+
+
+<!-- MAIN -->
+
+<main class="container">
+
+
+    <div class="title-section">
+
+        <h1>Party Budget Plan</h1>
+
+        <p>
+            AI-generated recommendations based on your
+            party budget and requirements.
+        </p>
+
+    </div>
+
+
+
+    {% if recommendations is mapping %}
+
+
+    <!-- BUDGET -->
+
+    <div class="budget-card">
+
+        <h2>
+            Budget:
+            ₹{{ recommendations.total_budget }}
+        </h2>
+
+    </div>
+
+
+
+    <!-- CATEGORIES -->
+
+    {% for category in recommendations.categories %}
+
+
+    <div class="category-card">
+
+
+        <div class="category-header">
+
+
+            {% if category.name == "Venue" %}
+
+                <span>📍</span>
+
+            {% elif category.name == "Catering" %}
+
+                <span>🍽️</span>
+
+            {% elif category.name == "Decoration" %}
+
+                <span>🎈</span>
+
+            {% elif category.name == "Entertainment" %}
+
+                <span>🎵</span>
+
+            {% elif category.name == "Contingency" %}
+
+                <span>🔵</span>
+
+            {% else %}
+
+                <span>🎉</span>
+
+            {% endif %}
+
+
+            <h3>
+                {{ category.name }}
+            </h3>
+
+
+            <strong>
+                ₹{{ category.allocation }}
+            </strong>
+
+
+        </div>
+
+
+
+        {% for item in category.items %}
+
+
+        <div class="item-card">
+
+
+            <div class="item-top">
+
+                <strong>
+                    {{ item.item }}
+                </strong>
+
+
+                <strong>
+                    ₹{{ item.price }}
+                </strong>
+
+            </div>
+
+
+            <p>
+                {{ item.description }}
+            </p>
+
+
+            <div class="quantity">
+
+                Quantity:
+                {{ item.quantity }}
+
+            </div>
+
+
+            {% if item.shopping_links %}
+
+            <div class="shop">
+
+                Shop on:
+
+                {% for link in item.shopping_links %}
+
+                    {% if link.url %}
+
+                    <a
+                        href="{{ link.url }}"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        {{ link.label }}
+                    </a>
+
+                    {% endif %}
+
+                {% endfor %}
+
+            </div>
+
+            {% endif %}
+
+
+        </div>
+
+
+        {% endfor %}
+
+
+    </div>
+
+
+    {% endfor %}
+
+
+
+    <!-- TOTAL -->
+
+    <div class="total-card">
+
+
+        <div>
+
+            <span>
+                Total Budget
+            </span>
+
+            <strong>
+                ₹{{ recommendations.total_budget }}
+            </strong>
+
+        </div>
+
+
+        <div>
+
+            <span>
+                Allocated
+            </span>
+
+            <strong>
+                ₹{{ recommendations.allocated_budget }}
+            </strong>
+
+        </div>
+
+
+        <div>
+
+            <span>
+                Remaining
+            </span>
+
+            <strong>
+                ₹{{ recommendations.remaining_budget }}
+            </strong>
+
+        </div>
+
+
+    </div>
+
+
+
+    <!-- SUGGESTIONS -->
+
+    <div class="suggestions-card">
+
+        <h3>
+            💡 Additional Suggestions
+        </h3>
+
+
+        <ul>
+
+            {% for suggestion
+                in recommendations.additional_suggestions %}
+
+            <li>
+                {{ suggestion }}
+            </li>
+
+            {% endfor %}
+
+        </ul>
+
+    </div>
+
+
+
+    {% else %}
+
+
+    <!-- ERROR -->
+
+    <div class="error-card">
+
+        {{ recommendations }}
+
+    </div>
+
+
+    {% endif %}
+
+
+
+    <!-- BACK -->
+
+    <div class="back-section">
+
+        <a href="/party-planner">
+
+            ← Back to Party Planner
+
+        </a>
+
+    </div>
+
+
+</main>
+
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    <h3>PocketSmart AI</h3>
+
+    <p>
+        Smart AI-powered budget planning for everyday needs.
+    </p>
+
+</footer>
+
+
+</body>
+
+</html>

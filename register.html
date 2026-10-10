@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Register - PocketSmart</title>
+
+
+    <!-- Google Font -->
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+          rel="stylesheet">
+
+
+    <!-- Font Awesome -->
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+
+    <!-- Register CSS -->
+
+    <link rel="stylesheet"
+          href="/static/register.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================
+         TOP PARTNER LOGOS
+    ====================================== -->
+
+    <div class="partner-logos">
+
+        <div class="smartbridge">
+
+          
+
+            </div>
+
+        </div>
+
+
+       
+
+    </div>
+
+
+
+    <!-- =====================================
+         DOCUMENTATION LABEL
+    ====================================== -->
+
+    
+
+
+
+    <!-- =====================================
+         POCKETSMART BRAND
+    ====================================== -->
+
+    <div class="brand-section">
+
+        <h1>
+            PocketSmart
+        </h1>
+
+        <p>
+            AI-Powered Budget Planning
+        </p>
+
+    </div>
+
+
+
+    <!-- =====================================
+         REGISTER CARD
+    ====================================== -->
+
+    <main class="register-container">
+
+
+        <div class="register-card">
+
+
+            <h2>
+                Create Your Account
+            </h2>
+
+
+
+            <!-- =================================
+                 REGISTER FORM
+            ================================== -->
+
+            <form
+                action="/register"
+                method="post"
+                class="register-form">
+
+
+                <!-- USERNAME -->
+
+                <div class="form-group">
+
+                    <label for="username">
+                        Username
+                    </label>
+
+                    <div class="input-wrapper">
+
+                        <i class="fa-solid fa-user"></i>
+
+                        <input
+                            type="text"
+                            id="username"
+                            name="username"
+                            placeholder="Choose a username"
+                            required>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- EMAIL -->
+
+                <div class="form-group">
+
+                    <label for="email">
+                        Email
+                    </label>
+
+                    <div class="input-wrapper">
+
+                        <i class="fa-solid fa-envelope"></i>
+
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="Enter your email"
+                            required>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- PASSWORD -->
+
+                <div class="form-group">
+
+                    <label for="password">
+                        Password
+                    </label>
+
+                    <div class="input-wrapper">
+
+                        <i class="fa-solid fa-lock"></i>
+
+                        <input
+                            type="password"
+                            id="password"
+                            name="password"
+                            placeholder="Create a strong password"
+                            required>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- PASSWORD DIVIDER -->
+
+                <div class="password-divider"></div>
+
+
+
+                <!-- CONFIRM PASSWORD -->
+
+                <div class="form-group confirm-group">
+
+                    <label for="confirm-password">
+                        Confirm Password
+                    </label>
+
+                    <div class="input-wrapper">
+
+                        <i class="fa-solid fa-circle-check"></i>
+
+                        <input
+                            type="password"
+                            id="confirm-password"
+                            name="confirm_password"
+                            placeholder="Confirm your password"
+                            required>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- CREATE ACCOUNT -->
+
+                <button
+                    type="submit"
+                    class="create-button">
+
+                    <span>
+                        Create Account
+                    </span>
+
+                    <i class="fa-solid fa-user-plus"></i>
+
+                </button>
+
+
+            </form>
+
+
+
+            <!-- =================================
+                 SIGN IN
+            ================================== -->
+
+            <p class="signin-text">
+
+                Already have an account?
+
+                <a href="/login">
+    Sign In
+</a>
+
+            </p>
+
+
+        </div>
+
+    </main>
+
+
+</body>
+
+</html>

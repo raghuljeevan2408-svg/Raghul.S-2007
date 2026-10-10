@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>User Dashboard - PocketSmart</title>
+
+
+    <!-- Google Font -->
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+          rel="stylesheet">
+
+
+    <!-- Font Awesome -->
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+
+    <!-- Dashboard CSS -->
+
+    <link rel="stylesheet"
+          href="/static/dashboard.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- =================================================
+         NAVBAR
+    ================================================== -->
+
+    <nav class="dashboard-navbar">
+
+
+        <!-- LOGO -->
+
+        <a href="/dashboard"
+           class="dashboard-logo">
+
+            <span class="logo-icon">
+                <i class="fa-solid fa-wallet"></i>
+            </span>
+
+            PocketSmart
+
+        </a>
+
+
+
+        <!-- NAVIGATION -->
+
+        <div class="dashboard-nav-links">
+
+            <a href="/home-planner">
+
+                <i class="fa-solid fa-house"></i>
+
+                Home Planner
+
+            </a>
+
+
+            <a href="/party-planner">
+
+                <i class="fa-solid fa-champagne-glasses"></i>
+
+                Party Planner
+
+            </a>
+
+
+            <a href="/jewelry-planner">
+
+                <i class="fa-solid fa-gem"></i>
+
+                Jewelry Planner
+
+            </a>
+
+
+            <a href="/history">
+
+                <i class="fa-solid fa-clock-rotate-left"></i>
+
+                History
+
+            </a>
+
+
+            <a href="/logout">
+
+                <i class="fa-solid fa-right-from-bracket"></i>
+
+                Logout
+
+            </a>
+
+        </div>
+
+    </nav>
+
+
+
+    <!-- =================================================
+         WELCOME SECTION
+    ================================================== -->
+
+    <section class="welcome-section">
+
+        <h1>
+            Welcome, Thansiya!
+        </h1>
+
+        <p>
+            Choose a budget planner to get started with your
+            personalized financial planning experience
+        </p>
+
+    </section>
+
+
+
+    <!-- =================================================
+         PLANNER CARDS
+    ================================================== -->
+
+    <section class="planner-section">
+
+
+        <div class="planner-cards">
+
+
+            <!-- =========================================
+                 HOME CARD
+            ========================================== -->
+
+            <div class="planner-card">
+
+
+                <div class="planner-image home-image"></div>
+
+
+                <div class="planner-content">
+
+                    <h2>
+
+                        <i class="fa-solid fa-house"></i>
+
+                        Home Budget Planner
+
+                    </h2>
+
+
+                    <p>
+                        Plan your interior design budget efficiently
+                        with AI-powered recommendations for furniture,
+                        lighting, and more.
+                    </p>
+
+
+                    <a href="/home-planner"
+                       class="planner-button">
+
+                        Get Started
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =========================================
+                 PARTY CARD
+            ========================================== -->
+
+            <div class="planner-card">
+
+
+                <div class="planner-image party-image"></div>
+
+
+                <div class="planner-content">
+
+                    <h2>
+
+                        <i class="fa-solid fa-champagne-glasses"></i>
+
+                        Party Budget Planner
+
+                    </h2>
+
+
+                    <p>
+                        Plan your perfect event with budget allocations
+                        for venue, catering, decorations, and
+                        entertainment.
+                    </p>
+
+
+                    <a href="/party-planner"
+                       class="planner-button">
+
+                        Get Started
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =========================================
+                 JEWELRY CARD
+            ========================================== -->
+
+            <div class="planner-card">
+
+
+                <div class="planner-image jewelry-image"></div>
+
+
+                <div class="planner-content">
+
+                    <h2>
+
+                        <i class="fa-solid fa-gem"></i>
+
+                        Jewelry Budget Planner
+
+                    </h2>
+
+
+                    <p>
+                        Find the ideal jewelry pieces for any occasion
+                        that match your outfit and stay within your
+                        budget.
+                    </p>
+
+
+                    <a href="/jewelry-planner"
+                       class="planner-button">
+
+                        Get Started
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- =================================================
+             HISTORY BUTTON
+        ================================================== -->
+
+        <a href="/history"
+           class="history-button">
+
+            <i class="fa-solid fa-clock-rotate-left"></i>
+
+            View All Recommendation History
+
+        </a>
+
+
+    </section>
+
+
+
+    <!-- =================================================
+         RECENT ACTIVITY
+    ================================================== -->
+
+    <section class="activity-section">
+
+
+        <div class="activity-card">
+
+
+            <!-- HEADER -->
+
+            <div class="activity-header">
+
+                <i class="fa-solid fa-clock-rotate-left"></i>
+
+                Recent Activity
+
+            </div>
+
+
+
+            <!-- ACTIVITY 1 -->
+
+            <div class="activity-item">
+
+                <div class="activity-icon home-icon">
+
+                    <i class="fa-solid fa-house"></i>
+
+                </div>
+
+
+                <div class="activity-details">
+
+                    <strong>
+                        Home Budget Plan
+                    </strong>
+
+                    <span>
+                        Budget: ₹15,000 - Created on May 7, 2025
+                    </span>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- ACTIVITY 2 -->
+
+            <div class="activity-item">
+
+                <div class="activity-icon party-icon">
+
+                    <i class="fa-solid fa-champagne-glasses"></i>
+
+                </div>
+
+
+                <div class="activity-details">
+
+                    <strong>
+                        Birthday Party Budget Plan
+                    </strong>
+
+                    <span>
+                        Budget: ₹25,000 for 30 guests - Created on May 5, 2025
+                    </span>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- ACTIVITY 3 -->
+
+            <div class="activity-item">
+
+                <div class="activity-icon jewelry-icon">
+
+                    <i class="fa-solid fa-gem"></i>
+
+                </div>
+
+
+                <div class="activity-details">
+
+                    <strong>
+                        Jewelry Budget Plan
+                    </strong>
+
+                    <span>
+                        Budget: ₹5,000 for Anniversary - Created on April 25, 2025
+                    </span>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         FOOTER
+    ================================================== -->
+
+    <footer class="dashboard-footer">
+
+        © 2025 PocketSmart. All rights reserved.
+
+    </footer>
+
+
+</body>
+
+</html>

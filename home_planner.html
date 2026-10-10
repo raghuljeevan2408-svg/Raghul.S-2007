@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Home Interior Budget Planner - PocketSmart</title>
+
+
+    <!-- Google Font -->
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+          rel="stylesheet">
+
+
+    <!-- Font Awesome -->
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+
+    <!-- Home Planner CSS -->
+
+    <link rel="stylesheet"
+          href="/static/home_planner.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- =================================================
+         NAVBAR
+    ================================================== -->
+
+    <nav class="planner-navbar">
+
+
+        <!-- LOGO -->
+
+        <a href="/dashboard"
+           class="planner-logo">
+
+            <span class="logo-icon">
+                <i class="fa-solid fa-wallet"></i>
+            </span>
+
+            PocketSmart
+
+        </a>
+
+
+
+        <!-- NAVIGATION -->
+
+        <div class="planner-nav-links">
+
+            <a href="/dashboard">
+
+                <i class="fa-solid fa-chart-line"></i>
+
+                Dashboard
+
+            </a>
+
+
+            <a href="/home-planner"
+               class="active">
+
+                <i class="fa-solid fa-house"></i>
+
+                Home Budget
+
+            </a>
+
+
+            <a href="/party-planner">
+
+                <i class="fa-solid fa-champagne-glasses"></i>
+
+                Party Budget
+
+            </a>
+
+
+            <a href="/jewelry-planner">
+
+                <i class="fa-solid fa-gem"></i>
+
+                Jewelry Budget
+
+            </a>
+
+        </div>
+
+
+        <!-- LOGOUT -->
+
+        <a href="/logout"
+           class="logout-link">
+
+            <i class="fa-solid fa-right-from-bracket"></i>
+
+            Logout
+
+        </a>
+
+    </nav>
+
+
+
+    <!-- =================================================
+         PAGE HEADER
+    ================================================== -->
+
+    <section class="planner-header">
+
+        <h1>
+            Home Interior Budget Planner
+        </h1>
+
+        <p>
+            Create a customized budget plan for your dream home interior
+        </p>
+
+    </section>
+
+
+
+    <!-- =================================================
+         MAIN FORM
+    ================================================== -->
+
+    <main class="planner-main">
+
+
+        <form
+            action="/home-planner"
+            method="post"
+            class="home-planner-form">
+
+
+            <!-- =================================================
+                 BUDGET DETAILS
+            ================================================== -->
+
+            <section class="form-section">
+
+
+                <div class="section-title">
+
+                    <div class="section-icon">
+
+                        <i class="fa-solid fa-dollar-sign"></i>
+
+                    </div>
+
+                    <div>
+
+                        <h2>
+                            Budget Details
+                        </h2>
+
+                        <div class="section-line"></div>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="field full-field">
+
+                    <label for="total-budget">
+
+                        Total Budget ($)
+
+                    </label>
+
+
+                    <div class="input-box">
+
+                        <i class="fa-solid fa-money-bill-wave"></i>
+
+                        <input
+                            type="number"
+                            id="total-budget"
+                            name="total_budget"
+                            value="5000"
+                            min="0">
+
+                    </div>
+
+                </div>
+
+
+            </section>
+
+
+
+            <!-- =================================================
+                 FIXTURES & FURNITURE
+            ================================================== -->
+
+            <section class="form-section">
+
+
+                <div class="section-title">
+
+                    <div class="section-icon">
+
+                        <i class="fa-solid fa-lightbulb"></i>
+
+                    </div>
+
+                    <div>
+
+                        <h2>
+                            Fixtures &amp; Furniture
+                        </h2>
+
+                        <div class="section-line"></div>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="fields-grid">
+
+
+                    <!-- LIGHTS -->
+
+                    <div class="field">
+
+                        <label for="lights">
+
+                            <i class="fa-solid fa-lightbulb"></i>
+
+                            Number of Lights/Fixtures
+
+                        </label>
+
+
+                        <div class="input-box">
+
+                            <input
+                                type="number"
+                                id="lights"
+                                name="lights"
+                                value="5"
+                                min="0">
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- CEILING FANS -->
+
+                    <div class="field">
+
+                        <label for="fans">
+
+                            <i class="fa-solid fa-fan"></i>
+
+                            Number of Ceiling Fans
+
+                        </label>
+
+
+                        <div class="input-box">
+
+                            <input
+                                type="number"
+                                id="fans"
+                                name="fans"
+                                value="4"
+                                min="0">
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- FURNITURE -->
+
+                    <div class="field">
+
+                        <label for="furniture">
+
+                            <i class="fa-solid fa-couch"></i>
+
+                            Number of Furniture Pieces
+
+                        </label>
+
+
+                        <div class="input-box">
+
+                            <input
+                                type="number"
+                                id="furniture"
+                                name="furniture"
+                                value="2"
+                                min="0">
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- DINING TABLES -->
+
+                    <div class="field">
+
+                        <label for="dining-tables">
+
+                            <i class="fa-solid fa-utensils"></i>
+
+                            Number of Dining Tables
+
+                        </label>
+
+
+                        <div class="input-box">
+
+                            <input
+                                type="number"
+                                id="dining-tables"
+                                name="dining_tables"
+                                value="1"
+                                min="0">
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+
+            </section>
+
+
+
+            <!-- =================================================
+                 ROOMS TO INCLUDE
+            ================================================== -->
+
+            <section class="form-section rooms-section">
+
+
+                <div class="section-title">
+
+                    <div class="section-icon">
+
+                        <i class="fa-solid fa-house"></i>
+
+                    </div>
+
+                    <div>
+
+                        <h2>
+                            Rooms to Include
+                        </h2>
+
+                        <div class="section-line"></div>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="rooms-options">
+
+
+                    <!-- LIVING ROOM -->
+
+                    <label class="check-option">
+
+                        <input
+                            type="checkbox"
+                            name="rooms"
+                            value="living_room"
+                            checked>
+
+                        <span class="custom-checkbox"></span>
+
+                        <i class="fa-solid fa-couch"></i>
+
+                        <span>
+                            Living Room
+                        </span>
+
+                    </label>
+
+
+
+                    <!-- KITCHEN -->
+
+                    <label class="check-option">
+
+                        <input
+                            type="checkbox"
+                            name="rooms"
+                            value="kitchen"
+                            checked>
+
+                        <span class="custom-checkbox"></span>
+
+                        <i class="fa-solid fa-utensils"></i>
+
+                        <span>
+                            Kitchen
+                        </span>
+
+                    </label>
+
+
+
+                    <!-- BEDROOM -->
+
+                    <label class="check-option">
+
+                        <input
+                            type="checkbox"
+                            name="rooms"
+                            value="bedroom">
+
+                        <span class="custom-checkbox"></span>
+
+                        <i class="fa-solid fa-bed"></i>
+
+                        <span>
+                            Bedroom
+                        </span>
+
+                    </label>
+
+
+                </div>
+
+
+            </section>
+
+
+
+            <!-- =================================================
+                 ADDITIONAL INFORMATION
+            ================================================== -->
+
+            <section class="form-section">
+
+
+                <div class="section-title">
+
+                    <div class="section-icon">
+
+                        <i class="fa-solid fa-clipboard"></i>
+
+                    </div>
+
+                    <div>
+
+                        <h2>
+                            Additional Information
+                        </h2>
+
+                        <div class="section-line"></div>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="field">
+
+                    <label for="requirements">
+
+                        Special Requirements or Preferences
+
+                    </label>
+
+
+                    <textarea
+                        id="requirements"
+                        name="requirements"
+                        placeholder="Any specific requirements or preferences..."></textarea>
+
+                </div>
+
+
+            </section>
+
+
+
+            <!-- =================================================
+                 GENERATE BUTTON
+            ================================================== -->
+
+            <div class="generate-container">
+
+                <button
+                    type="submit"
+                    class="generate-button">
+
+                    <i class="fa-solid fa-calculator"></i>
+
+                    Generate Recommendations
+
+                </button>
+
+            </div>
+
+
+        </form>
+
+
+    </main>
+
+
+</body>
+
+</html>

@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Jewelry Budget Planner - PocketSmart</title>
+
+
+    <!-- Google Font -->
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+          rel="stylesheet">
+
+
+    <!-- Font Awesome -->
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+
+    <!-- Jewelry CSS -->
+
+    <link rel="stylesheet"
+          href="/static/jewelry_planner.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- =================================================
+         NAVBAR
+    ================================================== -->
+
+    <nav class="jewelry-navbar">
+
+
+        <!-- LOGO -->
+
+        <a href="/dashboard"
+           class="jewelry-logo">
+
+            <span class="jewelry-logo-icon">
+                <i class="fa-solid fa-wallet"></i>
+            </span>
+
+            PocketSmart
+
+        </a>
+
+
+
+        <!-- NAVIGATION -->
+
+        <div class="jewelry-nav-links">
+
+            <a href="/dashboard">
+
+                <i class="fa-solid fa-chart-line"></i>
+
+                Dashboard
+
+            </a>
+
+
+            <a href="/home-planner">
+
+                <i class="fa-solid fa-house"></i>
+
+                Home Budget
+
+            </a>
+
+
+            <a href="/party-planner">
+
+                <i class="fa-solid fa-people-group"></i>
+
+                Party Budget
+
+            </a>
+
+
+            <a href="/jewelry-planner"
+               class="active">
+
+                <i class="fa-solid fa-gem"></i>
+
+                Jewelry Budget
+
+            </a>
+
+
+            <a href="/history">
+
+                <i class="fa-solid fa-clock-rotate-left"></i>
+
+                History
+
+            </a>
+
+        </div>
+
+
+
+        <!-- LOGOUT -->
+
+        <a href="/logout"
+           class="jewelry-logout">
+
+            <i class="fa-solid fa-right-from-bracket"></i>
+
+            Logout
+
+        </a>
+
+    </nav>
+
+
+
+    <!-- =================================================
+         PAGE HEADER
+    ================================================== -->
+
+    <section class="jewelry-header">
+
+        <h1>
+            Jewelry Budget Planner
+        </h1>
+
+        <p>
+            Get AI-powered jewelry recommendations within your budget for any occasion
+        </p>
+
+    </section>
+
+
+
+    <!-- =================================================
+         MAIN
+    ================================================== -->
+
+    <main class="jewelry-main">
+
+
+        <form
+            action="/jewelry-planner"
+            method="post"
+            enctype="multipart/form-data"
+            class="jewelry-form">
+
+
+            <!-- =================================================
+                 BUDGET DETAILS
+            ================================================== -->
+
+            <section class="jewelry-section">
+
+
+                <div class="jewelry-section-title">
+
+                    <div class="jewelry-section-icon">
+
+                        <i class="fa-solid fa-dollar-sign"></i>
+
+                    </div>
+
+                    <div>
+
+                        <h2>
+                            Budget Details
+                        </h2>
+
+                        <div class="jewelry-title-line"></div>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="jewelry-field">
+
+                    <label for="total-budget">
+
+                        Total Budget ($)
+
+                    </label>
+
+
+                    <div class="jewelry-input">
+
+                        <i class="fa-solid fa-money-bill-wave"></i>
+
+                        <input
+                            type="number"
+                            id="total-budget"
+                            name="total_budget"
+                            value="5000"
+                            min="0">
+
+                    </div>
+
+                </div>
+
+
+            </section>
+
+
+
+            <!-- =================================================
+                 OCCASION & PREFERENCES
+            ================================================== -->
+
+            <section class="jewelry-section occasion-section">
+
+
+                <div class="jewelry-section-title">
+
+                    <div class="jewelry-section-icon">
+
+                        <i class="fa-solid fa-calendar-check"></i>
+
+                    </div>
+
+                    <div>
+
+                        <h2>
+                            Occasion &amp; Preferences
+                        </h2>
+
+                        <div class="jewelry-title-line"></div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- OCCASION -->
+
+                <div class="jewelry-field occasion-field">
+
+                    <label for="occasion">
+
+                        <i class="fa-solid fa-person"></i>
+
+                        Occasion
+
+                    </label>
+
+
+                    <div class="jewelry-input occasion-input">
+
+                        <select
+                            id="occasion"
+                            name="occasion">
+
+                            <option selected>
+                                Birthday
+                            </option>
+
+                            <option>
+                                Wedding
+                            </option>
+
+                            <option>
+                                Anniversary
+                            </option>
+
+                            <option>
+                                Engagement
+                            </option>
+
+                            <option>
+                                Party
+                            </option>
+
+                            <option>
+                                Other
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- STYLE PREFERENCES -->
+
+                <div class="jewelry-field style-field">
+
+                    <label for="style-preferences">
+
+                        <i class="fa-solid fa-heart"></i>
+
+                        Style Preferences
+
+                    </label>
+
+
+                    <textarea
+                        id="style"
+                        name="style"
+                        placeholder="Describe your style preferences, materials, colors, etc."></textarea>
+
+                </div>
+
+
+            </section>
+
+
+
+            <!-- =================================================
+                 UPLOAD OUTFIT IMAGE
+            ================================================== -->
+
+            <section class="jewelry-section upload-section">
+
+
+                <div class="jewelry-section-title">
+
+                    <div class="jewelry-section-icon">
+
+                        <i class="fa-solid fa-shirt"></i>
+
+                    </div>
+
+                    <div>
+
+                        <h2>
+                            Upload Outfit Image
+                        </h2>
+
+                        <div class="jewelry-title-line"></div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- FILE INPUT -->
+
+                <input
+                    type="file"
+                    id="outfit-image"
+                    name="outfit_image"
+                    accept="image/*"
+                    hidden>
+
+
+
+                <!-- IMAGE PREVIEW AREA -->
+
+                <div class="upload-area">
+
+
+                    <label
+                        for="outfit-image"
+                        class="image-preview"
+                        id="imagePreview">
+
+
+                        <img
+                            src="/static/default_outfit_preview.jpeg"
+                            id="previewImage"
+                            alt="Outfit Preview">
+
+
+                        <span
+                            class="upload-placeholder"
+                            id="uploadPlaceholder">
+
+                            <i class="fa-solid fa-cloud-arrow-up"></i>
+
+                            Click to upload outfit image
+
+                        </span>
+
+                    </label>
+
+
+
+                    <!-- REMOVE BUTTON -->
+
+                    <button
+                        type="button"
+                        id="removeImage"
+                        class="remove-image">
+
+                        <i class="fa-solid fa-trash"></i>
+
+                        Remove Image
+
+                    </button>
+
+
+                </div>
+
+
+            </section>
+
+
+
+            <!-- =================================================
+                 GET RECOMMENDATIONS
+            ================================================== -->
+
+            <div class="recommendation-container">
+
+                <button
+                    type="submit"
+                    class="recommendation-button">
+
+                    <i class="fa-solid fa-wand-magic-sparkles"></i>
+
+                    Get Recommendations
+
+                </button>
+
+            </div>
+
+
+        </form>
+
+
+    </main>
+
+
+
+    <!-- =================================================
+         FOOTER
+    ================================================== -->
+
+    <footer class="jewelry-footer">
+
+        © 2025 PocketSmart | Smart Budget Solutions
+
+    </footer>
+
+
+
+    <!-- =================================================
+         IMAGE PREVIEW JAVASCRIPT
+    ================================================== -->
+
+    <script>
+
+        const imageInput =
+            document.getElementById("outfit-image");
+
+        const previewImage =
+            document.getElementById("previewImage");
+
+        const uploadPlaceholder =
+            document.getElementById("uploadPlaceholder");
+
+        const removeImage =
+            document.getElementById("removeImage");
+
+
+        const defaultImage =
+            "/static/default_outfit_preview.png";
+
+
+        imageInput.addEventListener(
+            "change",
+            function () {
+
+                const file = this.files[0];
+
+                if (file) {
+
+                    const reader =
+                        new FileReader();
+
+                    reader.onload =
+                        function (event) {
+
+                            previewImage.src =
+                                event.target.result;
+
+                            previewImage.style.display =
+                                "block";
+
+                            uploadPlaceholder.style.display =
+                                "none";
+
+                        };
+
+                    reader.readAsDataURL(file);
+
+                }
+
+            }
+        );
+
+
+        removeImage.addEventListener(
+            "click",
+            function () {
+
+                imageInput.value = "";
+
+                previewImage.src =
+                    defaultImage;
+
+                previewImage.style.display =
+                    "block";
+
+                uploadPlaceholder.style.display =
+                    "none";
+
+            }
+        );
+
+    </script>
+
+
+</body>
+
+</html>

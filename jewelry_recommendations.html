@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Jewelry Budget Recommendations
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="{{ url_for(
+            'static',
+            path='jewelry_recommendations.css'
+        ) }}"
+    >
+
+</head>
+
+
+<body>
+
+
+<!-- =========================================================
+     HEADER
+========================================================= -->
+
+<header class="header">
+
+    <div>
+
+        <h2>PocketSmart AI</h2>
+
+        <p>
+            Smart Budget Planning
+        </p>
+
+    </div>
+
+</header>
+
+
+
+<!-- =========================================================
+     MAIN
+========================================================= -->
+
+<main class="container">
+
+
+    <!-- PAGE TITLE -->
+
+    <div class="title-section">
+
+        <h1>
+            Your Personalized Jewelry Recommendations
+        </h1>
+
+        <a
+            href="/jewelry-planner"
+            class="generate-btn"
+        >
+            ✎ Get Recommendations
+        </a>
+
+    </div>
+
+
+
+    {% if recommendations is mapping %}
+
+
+    <!-- =====================================================
+         BUDGET SUMMARY
+    ====================================================== -->
+
+    <section class="card">
+
+        <div class="section-header">
+
+            💰 Budget Summary
+
+        </div>
+
+
+        <div class="budget-row">
+
+            <div>
+
+                <strong>
+                    Total Budget
+                </strong>
+
+                <span>
+                    ₹{{ recommendations.total_budget }}
+                </span>
+
+            </div>
+
+
+            <div>
+
+                <strong>
+                    Remaining Budget
+                </strong>
+
+                <span class="remaining">
+                    ₹{{ recommendations.remaining_budget }}
+                </span>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         OUTFIT ANALYSIS
+    ====================================================== -->
+
+    <section class="card">
+
+        <div class="section-header">
+
+            👕 Outfit Analysis
+
+        </div>
+
+
+        <div class="outfit-row">
+
+            <div>
+
+                🎨
+
+                <strong>
+                    Colors:
+                </strong>
+
+                {{ recommendations.outfit_analysis.colors }}
+
+            </div>
+
+
+            <div>
+
+                ✨
+
+                <strong>
+                    Style:
+                </strong>
+
+                {{ recommendations.outfit_analysis.style }}
+
+            </div>
+
+
+            <div>
+
+                👤
+
+                <strong>
+                    Formality:
+                </strong>
+
+                {{ recommendations.outfit_analysis.formality }}
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         JEWELRY RECOMMENDATIONS
+    ====================================================== -->
+
+    <section class="card">
+
+        <div class="section-header">
+
+            💎 Jewelry Recommendations
+
+        </div>
+
+
+        <div class="jewelry-list">
+
+
+            {% for item in recommendations.jewelry_recommendations %}
+
+
+            <div class="jewelry-item">
+
+
+                <div class="jewelry-name">
+
+                    <span class="circle">
+                        ○
+                    </span>
+
+                    <strong>
+                        {{ item.name }}
+                    </strong>
+
+                    <span class="price">
+                        ₹{{ item.price }}
+                    </span>
+
+                </div>
+
+
+                <p>
+
+                    <strong>
+                        Description:
+                    </strong>
+
+                    {{ item.description }}
+
+                </p>
+
+
+                <p>
+
+                    <strong>
+                        Style:
+                    </strong>
+
+                    {{ item.style }}
+
+                </p>
+
+
+                <!-- SHOPPING LINKS -->
+
+                <div class="shop-title">
+
+                    🛒 Shop For This:
+
+                </div>
+
+
+                <div class="shopping-links">
+
+
+                    {% for link in item.shopping_links %}
+
+
+                        {% if link.url %}
+
+                        <a
+                            href="{{ link.url }}"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+
+                            {{ link.label }}
+
+                        </a>
+
+                        {% else %}
+
+                        <span class="disabled-link">
+
+                            {{ link.label }}
+
+                        </span>
+
+                        {% endif %}
+
+
+                    {% endfor %}
+
+
+                </div>
+
+
+            </div>
+
+
+            {% endfor %}
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         STYLING TIPS
+    ====================================================== -->
+
+    <section class="card styling-card">
+
+        <div class="section-header">
+
+            💡 Styling Tips
+
+        </div>
+
+
+        <ul>
+
+            {% for tip in recommendations.styling_tips %}
+
+            <li>
+                {{ tip }}
+            </li>
+
+            {% endfor %}
+
+        </ul>
+
+    </section>
+
+
+
+    {% else %}
+
+
+    <!-- GEMINI ERROR -->
+
+    <section class="error-card">
+
+        {{ recommendations }}
+
+    </section>
+
+
+    {% endif %}
+
+
+
+    <!-- BACK BUTTON -->
+
+    <div class="back-section">
+
+        <a href="/jewelry-planner">
+
+            ← Back to Jewelry Planner
+
+        </a>
+
+    </div>
+
+
+</main>
+
+
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
+<footer>
+
+    <h3>
+        PocketSmart AI
+    </h3>
+
+    <p>
+        Smart AI-powered budget planning for everyday needs.
+    </p>
+
+</footer>
+
+
+</body>
+
+</html>

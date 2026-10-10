@@ -1,0 +1,542 @@
+/* =========================================
+   GLOBAL
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Poppins", Arial, sans-serif;
+    background: #ffffff;
+    color: #16395f;
+}
+
+
+/* =========================================
+   PAGE WRAPPER
+========================================= */
+
+.page {
+    width: calc(100% - 36px);
+    margin: 4px 18px 0 18px;
+}
+
+
+/* =========================================
+   NAVBAR
+========================================= */
+
+.navbar {
+    height: 55px;
+
+    background: #16395f;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 30px;
+
+    color: white;
+}
+
+
+/* Logo */
+
+.logo {
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+
+/* Navigation */
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #ffffff;
+
+    font-size: 11px;
+    font-weight: 500;
+
+    transition: 0.3s ease;
+}
+
+.nav-links a:hover {
+    opacity: 0.75;
+}
+
+
+/* Get Started Navbar */
+
+.nav-button {
+    background: linear-gradient(
+        135deg,
+        #4d83c2,
+        #16395f
+    );
+
+    padding: 9px 19px;
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 5px 12px rgba(0, 0, 0, 0.15);
+}
+
+.nav-button:hover {
+    transform: translateY(-1px);
+}
+
+
+/* =========================================
+   HERO
+========================================= */
+
+.hero {
+    min-height: 260px;
+
+    background: linear-gradient(
+        110deg,
+        #3c70aa 0%,
+        #16395f 100%
+    );
+
+    color: white;
+
+    text-align: center;
+
+    padding: 0 20px 30px;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+}
+
+
+/* Main title */
+
+.hero h1 {
+    font-size: 36px;
+
+    font-weight: 700;
+
+    margin-top: -2px;
+
+    margin-bottom: 7px;
+
+    letter-spacing: -1px;
+}
+
+
+/* Hero subtitle */
+
+.hero h2 {
+    font-size: 25px;
+
+    font-weight: 600;
+
+    margin-bottom: 12px;
+}
+
+
+/* Hero description */
+
+.hero p {
+    max-width: 570px;
+
+    font-size: 13px;
+
+    line-height: 1.55;
+
+    color: #f2f6fb;
+
+    margin-bottom: 20px;
+}
+
+
+/* =========================================
+   HERO BUTTONS
+========================================= */
+
+.hero-buttons {
+    display: flex;
+
+    gap: 16px;
+
+    align-items: center;
+}
+
+
+/* Primary button */
+
+.primary-button {
+    text-decoration: none;
+
+    color: white;
+
+    background: linear-gradient(
+        135deg,
+        #4784c5,
+        #12375d
+    );
+
+    padding: 10px 21px;
+
+    border-radius: 22px;
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+    box-shadow:
+        0 6px 14px rgba(0, 0, 0, 0.20);
+
+    transition: 0.3s ease;
+}
+
+.primary-button:hover {
+    transform: translateY(-2px);
+}
+
+
+/* Secondary button */
+
+.secondary-button {
+    text-decoration: none;
+
+    color: #263f5d;
+
+    background: #f4f5f7;
+
+    padding: 10px 21px;
+
+    border-radius: 22px;
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+    transition: 0.3s ease;
+}
+
+.secondary-button:hover {
+    background: white;
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================
+   PLANNER SECTION
+========================================= */
+
+.planners {
+    background: #ffffff;
+
+    padding: 82px 30px 50px;
+}
+
+
+/* Section heading */
+
+.section-heading {
+    text-align: center;
+
+    margin-bottom: 30px;
+}
+
+.section-heading h2 {
+    color: #14395f;
+
+    font-size: 27px;
+
+    font-weight: 600;
+
+    margin-bottom: 4px;
+}
+
+
+/* Yellow line */
+
+.heading-line {
+    width: 54px;
+
+    height: 3px;
+
+    background: #eab83f;
+
+    margin: 0 auto 6px;
+
+    border-radius: 2px;
+}
+
+
+/* Heading description */
+
+.section-heading p {
+    max-width: 470px;
+
+    margin: 0 auto;
+
+    color: #6e6e6e;
+
+    font-size: 11px;
+
+    line-height: 1.45;
+}
+
+
+/* =========================================
+   CARDS
+========================================= */
+
+.cards {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 16px;
+
+    max-width: 855px;
+
+    margin: 0 auto;
+}
+
+
+/* Individual card */
+
+.planner-card {
+    background: #ffffff;
+
+    border-radius: 10px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 4px 18px rgba(
+            0,
+            0,
+            0,
+            0.10
+        );
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.planner-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 9px 25px rgba(
+            0,
+            0,
+            0,
+            0.14
+        );
+}
+
+
+/* =========================================
+   CARD ICON
+========================================= */
+
+.card-icon {
+    height: 67px;
+
+    background: linear-gradient(
+        110deg,
+        #3d76b2,
+        #16395f
+    );
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    color: white;
+
+    font-size: 29px;
+}
+
+
+/* =========================================
+   CARD CONTENT
+========================================= */
+
+.card-content {
+    padding: 15px 15px 20px;
+}
+
+.card-content h3 {
+    color: #14395f;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    margin-bottom: 9px;
+}
+
+.card-content p {
+    color: #6f6f6f;
+
+    font-size: 10.5px;
+
+    line-height: 1.55;
+}
+
+
+/* =========================================
+   TESTIMONIALS
+========================================= */
+
+.testimonial-section {
+    padding: 50px 30px 70px;
+
+    background: #f7f9fc;
+}
+
+.testimonial-card {
+    max-width: 650px;
+
+    margin: 0 auto;
+
+    background: white;
+
+    padding: 30px;
+
+    text-align: center;
+
+    border-radius: 10px;
+
+    box-shadow:
+        0 4px 18px rgba(
+            0,
+            0,
+            0,
+            0.08
+        );
+}
+
+.testimonial-card p {
+    color: #555;
+
+    font-size: 14px;
+
+    line-height: 1.6;
+
+    margin-bottom: 15px;
+}
+
+.testimonial-card h4 {
+    color: #16395f;
+
+    font-size: 13px;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+footer {
+    background: #16395f;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 18px;
+
+    font-size: 11px;
+}
+
+
+/* =========================================
+   RESPONSIVE DESIGN
+========================================= */
+
+@media (max-width: 850px) {
+
+    .cards {
+        grid-template-columns: 1fr;
+        max-width: 500px;
+    }
+
+    .nav-links {
+        gap: 12px;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .hero h2 {
+        font-size: 21px;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .page {
+        width: 100%;
+        margin: 0;
+    }
+
+    .navbar {
+        height: auto;
+
+        padding: 15px 20px;
+
+        flex-direction: column;
+
+        gap: 12px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero {
+        padding-top: 5px;
+    }
+
+    .hero h1 {
+        font-size: 29px;
+    }
+
+    .hero h2 {
+        font-size: 19px;
+    }
+
+    .hero p {
+        font-size: 12px;
+    }
+
+    .planners {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}

@@ -1,0 +1,406 @@
+/* ============================================================
+   GLOBAL
+============================================================ */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f5f7fb;
+    color: #1f2937;
+}
+
+
+/* ============================================================
+   HEADER
+============================================================ */
+
+.top-header {
+    background: #0f315b;
+    color: white;
+    padding: 18px 40px;
+}
+
+.brand h2 {
+    margin: 0;
+    font-size: 22px;
+}
+
+.brand p {
+    margin: 4px 0 0;
+    font-size: 12px;
+    color: #dbeafe;
+}
+
+
+/* ============================================================
+   MAIN CONTAINER
+============================================================ */
+
+.container {
+    width: 92%;
+    max-width: 1150px;
+    margin: 35px auto 50px;
+}
+
+
+/* ============================================================
+   PAGE TITLE
+============================================================ */
+
+.page-title {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.page-title h1 {
+    margin: 0 0 10px;
+    color: #123f73;
+    font-size: 28px;
+}
+
+.page-title p {
+    margin: 0;
+    color: #64748b;
+    font-size: 14px;
+}
+
+
+/* ============================================================
+   GENERATE BUTTON
+============================================================ */
+
+.generate-section {
+    text-align: center;
+    margin: 22px 0 30px;
+}
+
+.generate-btn {
+    display: inline-block;
+    background: #2563eb;
+    color: white;
+    text-decoration: none;
+    padding: 11px 20px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.generate-btn:hover {
+    background: #1d4ed8;
+}
+
+
+/* ============================================================
+   SECTION TITLE
+============================================================ */
+
+.recommendation-section > h2 {
+    color: #123f73;
+    font-size: 20px;
+    margin: 0 0 15px;
+}
+
+
+/* ============================================================
+   BUDGET CARD
+============================================================ */
+
+.budget-card {
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.07);
+}
+
+.budget-card h3 {
+    margin: 0 0 15px;
+    color: #123f73;
+    font-size: 16px;
+}
+
+.budget-details {
+    display: flex;
+    gap: 20px;
+}
+
+.budget-box {
+    flex: 1;
+    background: #eef3f8;
+    border-radius: 7px;
+    padding: 15px;
+}
+
+.budget-box span {
+    display: block;
+    color: #64748b;
+    font-size: 13px;
+    margin-bottom: 7px;
+}
+
+.budget-box strong {
+    color: #2563eb;
+    font-size: 22px;
+}
+
+
+/* ============================================================
+   CATEGORY CARD
+============================================================ */
+
+.category-card {
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.07);
+}
+
+
+/* ============================================================
+   CATEGORY HEADER
+============================================================ */
+
+.category-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 18px;
+}
+
+.category-header h3 {
+    margin: 0;
+    color: #123f73;
+    font-size: 18px;
+}
+
+.allocation {
+    background: #e8f0ff;
+    color: #2563eb;
+    padding: 7px 12px;
+    border-radius: 5px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+
+/* ============================================================
+   TABLE
+============================================================ */
+
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+}
+
+thead {
+    background: #edf3f9;
+}
+
+th {
+    text-align: left;
+    padding: 12px 10px;
+    color: #123f73;
+    font-weight: 600;
+    border-bottom: 1px solid #dbe3ec;
+}
+
+td {
+    padding: 13px 10px;
+    border-bottom: 1px solid #e5e7eb;
+    vertical-align: top;
+}
+
+tbody tr:hover {
+    background: #f8fafc;
+}
+
+
+/* ============================================================
+   SHOPPING LINKS
+============================================================ */
+
+.shopping-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.shopping-btn {
+    display: inline-block;
+    background: #2563eb;
+    color: white;
+    text-decoration: none;
+    padding: 6px 9px;
+    border-radius: 4px;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.shopping-btn:hover {
+    background: #1d4ed8;
+}
+
+
+/* ============================================================
+   NO ITEMS
+============================================================ */
+
+.no-items {
+    color: #64748b;
+    font-size: 14px;
+    margin: 5px 0;
+}
+
+
+/* ============================================================
+   ADDITIONAL SUGGESTIONS
+============================================================ */
+
+.suggestions-card {
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 20px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.07);
+}
+
+.suggestions-card h3 {
+    margin: 0 0 15px;
+    color: #123f73;
+    font-size: 17px;
+}
+
+.suggestions-card ul {
+    margin: 0;
+    padding-left: 20px;
+}
+
+.suggestions-card li {
+    margin-bottom: 9px;
+    color: #475569;
+    line-height: 1.5;
+}
+
+
+/* ============================================================
+   AI RESPONSE FALLBACK
+============================================================ */
+
+.ai-response {
+    background: white;
+    border-radius: 10px;
+    padding: 25px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.07);
+}
+
+.ai-response h3 {
+    color: #123f73;
+    margin-top: 0;
+}
+
+.response-content {
+    white-space: pre-wrap;
+    line-height: 1.7;
+    color: #374151;
+}
+
+
+/* ============================================================
+   BACK BUTTON
+============================================================ */
+
+.bottom-action {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.back-btn {
+    display: inline-block;
+    background: #2563eb;
+    color: white;
+    text-decoration: none;
+    padding: 10px 18px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.back-btn:hover {
+    background: #1d4ed8;
+}
+
+
+/* ============================================================
+   FOOTER
+============================================================ */
+
+footer {
+    background: #0f315b;
+    color: white;
+    padding: 28px 40px;
+}
+
+.footer-content {
+    max-width: 1150px;
+    margin: auto;
+}
+
+.footer-content h3 {
+    margin: 0 0 7px;
+    font-size: 18px;
+}
+
+.footer-content p {
+    margin: 0;
+    color: #cbd5e1;
+    font-size: 13px;
+}
+
+
+/* ============================================================
+   RESPONSIVE
+============================================================ */
+
+@media (max-width: 700px) {
+
+    .container {
+        width: 94%;
+    }
+
+    .top-header {
+        padding: 16px 20px;
+    }
+
+    .page-title h1 {
+        font-size: 23px;
+    }
+
+    .budget-details {
+        flex-direction: column;
+    }
+
+    .category-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .shopping-links {
+        min-width: 150px;
+    }
+
+    footer {
+        padding: 25px 20px;
+    }
+}

@@ -1,0 +1,815 @@
+/* =====================================================
+   RESET
+===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    margin: 0;
+
+    background: #edf1f6;
+
+    color: #244f78;
+
+    font-family: "Poppins", Arial, sans-serif;
+}
+
+
+
+/* =====================================================
+   NAVBAR
+===================================================== */
+
+.party-navbar {
+
+    width: 100%;
+
+    height: 43px;
+
+    background: #12375d;
+
+    display: flex;
+
+    align-items: center;
+
+    padding: 0 29px;
+
+}
+
+
+.party-logo {
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 4px;
+
+    margin-right: auto;
+
+}
+
+
+.party-logo-icon {
+
+    color: #f6a81b;
+
+    font-size: 11px;
+
+}
+
+
+.party-nav-links {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 19px;
+
+}
+
+
+.party-nav-links a {
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    font-size: 7px;
+
+    font-weight: 500;
+
+    white-space: nowrap;
+
+    padding: 5px 7px;
+
+    border-radius: 3px;
+
+}
+
+
+.party-nav-links a i {
+
+    font-size: 7px;
+
+    margin-right: 3px;
+
+}
+
+
+.party-nav-links a.active {
+
+    color: #ffad20;
+
+    background: rgba(
+        255,
+        255,
+        255,
+        0.08
+    );
+
+}
+
+
+.party-nav-links a:hover {
+
+    opacity: 0.85;
+
+}
+
+
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+.party-header {
+
+    width: 100%;
+
+    height: 93px;
+
+    background: linear-gradient(
+        110deg,
+        #3d73ad 0%,
+        #1a406a 100%
+    );
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    color: #ffffff;
+
+}
+
+
+.party-header h1 {
+
+    font-size: 22px;
+
+    font-weight: 700;
+
+    line-height: 1.2;
+
+    margin-bottom: 6px;
+
+}
+
+
+.party-header p {
+
+    font-size: 7px;
+
+    color: #e5edf6;
+
+}
+
+
+
+/* =====================================================
+   MAIN
+===================================================== */
+
+.party-main {
+
+    width: 100%;
+
+    min-height: 537px;
+
+    background: #edf1f6;
+
+    padding: 15px 0 26px;
+
+    display: flex;
+
+    justify-content: center;
+
+}
+
+
+
+/* =====================================================
+   FORM CONTAINER
+===================================================== */
+
+.party-form {
+
+    width: 462px;
+
+    background: #ffffff;
+
+    border-radius: 8px;
+
+    padding: 16px;
+
+    box-shadow:
+        0 5px 18px rgba(
+            25,
+            60,
+            100,
+            0.12
+        );
+
+}
+
+
+
+/* =====================================================
+   FORM SECTION
+===================================================== */
+
+.party-section {
+
+    width: 100%;
+
+    background: #f4f6f8;
+
+    border: 1px solid #e8ebee;
+
+    border-radius: 6px;
+
+    padding: 12px;
+
+    margin-bottom: 10px;
+
+}
+
+
+
+/* =====================================================
+   SECTION TITLE
+===================================================== */
+
+.party-section-title {
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 7px;
+
+    margin-bottom: 10px;
+
+}
+
+
+.party-section-icon {
+
+    width: 20px;
+
+    height: 20px;
+
+    min-width: 20px;
+
+    border-radius: 50%;
+
+    background: #4380bd;
+
+    color: #ffffff;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 8px;
+
+}
+
+
+.party-section-title h2 {
+
+    color: #2b5e8d;
+
+    font-size: 9px;
+
+    font-weight: 600;
+
+    line-height: 1.5;
+
+}
+
+
+.party-section-line {
+
+    width: 70px;
+
+    height: 2px;
+
+    background: #4b82b8;
+
+    margin-top: 2px;
+
+}
+
+
+
+/* =====================================================
+   TWO COLUMN FIELDS
+===================================================== */
+
+.party-two-columns {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 13px;
+
+}
+
+
+.party-field {
+
+    width: 100%;
+
+}
+
+
+.party-field label {
+
+    display: block;
+
+    color: #244e77;
+
+    font-size: 7px;
+
+    font-weight: 600;
+
+    margin-bottom: 5px;
+
+}
+
+
+
+/* =====================================================
+   INPUT
+===================================================== */
+
+.party-input {
+
+    width: 100%;
+
+    height: 27px;
+
+    background: #ffffff;
+
+    border: 1px solid #dce2e7;
+
+    border-radius: 5px;
+
+    display: flex;
+
+    align-items: center;
+
+}
+
+
+.party-input > i {
+
+    width: 25px;
+
+    min-width: 25px;
+
+    text-align: center;
+
+    color: #3f78b1;
+
+    font-size: 7px;
+
+}
+
+
+.party-input input,
+.party-input select {
+
+    width: 100%;
+
+    height: 100%;
+
+    border: none;
+
+    outline: none;
+
+    background: transparent;
+
+    color: #59646e;
+
+    font-family: "Poppins", Arial, sans-serif;
+
+    font-size: 7px;
+
+    padding: 0 6px 0 0;
+
+}
+
+
+.party-input select {
+
+    appearance: auto;
+
+}
+
+
+
+/* =====================================================
+   PARTY NEEDS
+===================================================== */
+
+.party-needs {
+
+    display: grid;
+
+    grid-template-columns:
+        1fr
+        1fr
+        1fr;
+
+    gap: 8px;
+
+}
+
+
+.party-need {
+
+    height: 38px;
+
+    border: 1px solid #e0e5ea;
+
+    border-radius: 4px;
+
+    background: #ffffff;
+
+    display: flex;
+
+    align-items: center;
+
+    cursor: pointer;
+
+    position: relative;
+
+    padding: 0 5px;
+
+}
+
+
+.party-need input {
+
+    position: absolute;
+
+    opacity: 0;
+
+}
+
+
+.party-need:has(input:checked) {
+
+    border-color: #5a91c3;
+
+    background: #f2f6fa;
+
+}
+
+
+.party-check {
+
+    width: 8px;
+
+    height: 8px;
+
+    border: 1px solid #b8c2cc;
+
+    border-radius: 2px;
+
+    margin-right: 5px;
+
+    position: relative;
+
+}
+
+
+.party-need input:checked
+~ .party-check {
+
+    background: #3978b4;
+
+    border-color: #3978b4;
+
+}
+
+
+.party-need input:checked
+~ .party-check::after {
+
+    content: "✓";
+
+    color: #ffffff;
+
+    font-size: 6px;
+
+    position: absolute;
+
+    left: 1px;
+
+    top: -3px;
+
+}
+
+
+.need-icon {
+
+    width: 21px;
+
+    height: 21px;
+
+    min-width: 21px;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    margin-right: 5px;
+
+    color: #ffffff;
+
+    font-size: 8px;
+
+}
+
+
+.catering .need-icon {
+
+    background: #f6a51c;
+
+}
+
+
+.decoration .need-icon {
+
+    background: #4380bd;
+
+}
+
+
+.entertainment .need-icon {
+
+    background: #f5a623;
+
+}
+
+
+.need-text {
+
+    color: #355d82;
+
+    font-size: 7px;
+
+    font-weight: 500;
+
+}
+
+
+
+/* =====================================================
+   TEXTAREA
+===================================================== */
+
+.party-field textarea {
+
+    width: 100%;
+
+    height: 49px;
+
+    resize: vertical;
+
+    border: 1px solid #dce2e7;
+
+    border-radius: 5px;
+
+    background: #ffffff;
+
+    outline: none;
+
+    padding: 8px;
+
+    color: #56626d;
+
+    font-family: "Poppins", Arial, sans-serif;
+
+    font-size: 7px;
+
+}
+
+
+.party-field textarea::placeholder {
+
+    color: #8a9299;
+
+}
+
+
+.party-field textarea:focus {
+
+    border-color: #4380bd;
+
+}
+
+
+
+/* =====================================================
+   GENERATE BUTTON
+===================================================== */
+
+.generate-party-container {
+
+    width: 100%;
+
+    display: flex;
+
+    justify-content: center;
+
+    padding-top: 0;
+
+}
+
+
+.generate-party-button {
+
+    width: 100%;
+
+    height: 26px;
+
+    border: none;
+
+    border-radius: 4px;
+
+    background: #4380bd;
+
+    color: #ffffff;
+
+    font-family: "Poppins", Arial, sans-serif;
+
+    font-size: 7px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 4px;
+
+    box-shadow:
+        0 4px 10px rgba(
+            40,
+            90,
+            145,
+            0.18
+        );
+
+    transition: 0.2s ease;
+
+}
+
+
+.generate-party-button i {
+
+    font-size: 7px;
+
+}
+
+
+.generate-party-button:hover {
+
+    background: #356fa9;
+
+}
+
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+.party-footer {
+
+    width: 100%;
+
+    height: 33px;
+
+    background: #12375d;
+
+    color: #dce5ee;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 6px;
+
+}
+
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 700px) {
+
+    .party-navbar {
+
+        height: auto;
+
+        padding: 9px 15px;
+
+        flex-wrap: wrap;
+
+        gap: 7px;
+
+    }
+
+
+    .party-logo {
+
+        margin-right: 10px;
+
+    }
+
+
+    .party-nav-links {
+
+        gap: 8px;
+
+        flex-wrap: wrap;
+
+    }
+
+
+    .party-main {
+
+        padding: 15px;
+
+    }
+
+
+    .party-form {
+
+        width: 100%;
+
+        max-width: 462px;
+
+    }
+
+
+    .party-two-columns {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .party-needs {
+
+        grid-template-columns: 1fr;
+
+    }
+
+}
